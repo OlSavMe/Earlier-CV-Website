@@ -1,0 +1,93 @@
+
+
+    // .player-wrapper {
+    //     position: relative;
+    //     padding-top: 56.25% /* Player ratio: 100 / (1280 / 720) */
+    //   }
+
+    //   .react-player {
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     z-index: -1;
+    //   }
+ 
+  
+    .front {
+overflow: hidden;
+justify-items: center;
+
+
+
+>video {
+    background: rgba(0,0,0,0.3);
+    background-size: cover;
+   
+    z-index: -100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+
+  transition: 1s opacity;
+  
+
+
+}
+
+
+.box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
+    font-weight:100; 
+    background: rgba(0,0,0,0.3);
+    color: white;
+    padding: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    width: 50%;
+    position: relative; 
+    overflow:scroll;
+
+    h1 {
+        font-weight: bold;
+        letter-spacing: .5rem;
+    }
+
+   p{
+       line-height: 1;
+   }
+
+   button { 
+    display: block;
+    padding: 2rem;
+    border: none; 
+    margin: 1rem auto; 
+    font-size: 3rem;
+    background: rgba(255,255,255,0.23);
+    color: #fff;
+    border-radius: 5px; 
+    cursor: pointer;
+    font-weight: bold;
+    width: 30rem;
+   
+  }
+ button:hover { 
+     background: rgba(0,0,0,0.5);
+  }
+}
+
+
+}
+    
