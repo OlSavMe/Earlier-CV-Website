@@ -1,5 +1,5 @@
 import React from "react";
-import { MainPage, Front } from "./pages/index";
+import { Portfolio, Education, Front } from "./pages/index";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
@@ -9,7 +9,8 @@ function App() {
         <>
           <div className="App">
             <Route path="/" exact component={Front} />
-            <Route path="/main" exact component={MainPage} />
+            <Route path="/portfolio" exact component={Portfolio} />
+            <Route path="/edu" exact component={Education} />
 
 
           </div>
