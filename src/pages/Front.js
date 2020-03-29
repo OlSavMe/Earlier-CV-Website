@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/FrontStyles.scss';
 import bannervideo from '../images/ducks.mp4';
+import { Link } from "react-router-dom";
 
 
 
@@ -18,7 +19,14 @@ export default function Front() {
 
 
             <div className='box'>
-                <h1>Welcome to my website!</h1>
+                <nav>
+                    <Link to="/portfolio" className="nav-link">
+                        Portfolio
+                    </Link>
+                    <Link to="/edu" className="nav-link">
+                        Education
+                    </Link>
+                </nav>
 
                 <p>My name is Olga <br /> I am a frontend developer</p>
                 <button>Learn about me</button>
