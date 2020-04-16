@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import classnames from "classnames";
 import { Link } from "react-router-dom";
+import './Navigation.scss';
 
 export default class Navbar extends Component {
     constructor(props) {

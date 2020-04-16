@@ -1,0 +1,19 @@
+/* BOTTOM NAVIGATION STYLES */
+
+    header.bottom-navigation
+      > div.MuiBottomNavigation-root {
+        background-color: transparent;
+        >a{
+            color: white;
+            background-color: transparent;
+          }
+          >a.MuiBottomNavigationAction-root{
+            background-color: transparent;
+          }
+          >a.MuiBottomNavigationAction-root.Mui-selected {
+color: navy;
+          }
+      }
+     
+     
+  
