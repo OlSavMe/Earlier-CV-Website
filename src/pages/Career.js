@@ -10,7 +10,7 @@ import BottomNav from '../components/BottomNavigation';
 
 
 
-export default function Portfolio() {
+export default function Career() {
 
     return (
         <div className='front'>

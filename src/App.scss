@@ -1,19 +1,55 @@
 /* BOTTOM NAVIGATION STYLES */
+// @media screen and (max-width: 768px) {
+//     header.bottom-navigation {
+   
+//       > div.MuiBottomNavigation-root {
+//         background-color: transparent;
+//         height: 100%;
+   
+//         >a{
+//             color: white;
+//             background-color: transparent;
+//           }
+//           >a.MuiBottomNavigationAction-root{
+//             background-color: transparent;
+//           }
+//           >a.MuiBottomNavigationAction-root.Mui-selected {
+// color: navy;
+//           }
+//       }
+//     }}
 
-    header.bottom-navigation
-      > div.MuiBottomNavigation-root {
-        background-color: transparent;
-        >a{
-            color: white;
-            background-color: transparent;
-          }
-          >a.MuiBottomNavigationAction-root{
-            background-color: transparent;
-          }
-          >a.MuiBottomNavigationAction-root.Mui-selected {
-color: navy;
-          }
-      }
+
+//     @media screen and (min-width: 769px) {
+//       header.bottom-navigation {
+//      max-height: 4rem;
+//      min-height: 4rem;
+//         > div.MuiBottomNavigation-root {
+//           background-color: transparent;
+//           height: 100%;
      
+//           >a{
+//               color: white;
+//               background-color: transparent;
+//             }
+//             >a.MuiBottomNavigationAction-root{
+//               background-color: transparent;
+//               >span.MuiBottomNavigationAction-wrapper{
+// flex-direction: row;
+// >svg.MuiSvgIcon-root{
+//   display: none;
+// }
+// >span.MuiBottomNavigationAction-label{
+//   font-size: 1.7rem;
+//   font-family: 'Belleza', sans-serif;
+// }
+//               }
+//             }
+//             >a.MuiBottomNavigationAction-root.Mui-selected {
+//   color: navy;
+//             }
+//         }
+//       }}
+       
      
   

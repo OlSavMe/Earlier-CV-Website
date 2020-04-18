@@ -21,7 +21,7 @@ export default function Front() {
                 <source src={bannervideo} type="video/mp4" />
             </video>
             <div className='container'>
-                <BottomNav />
+
                 <menu>
                     <div><img
                         src={require("../images/workers.png")} />
@@ -70,23 +70,23 @@ export default function Front() {
                                 />
                             </a>
                             <a
-                                href="https://www.linkedin.com/company/theshortcut/"
+                                href="https://github.com/OlSavMe"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
                                 <img
                                     src={require("../images/github-icon.png")}
-                                    alt="linkedin-icon"
+                                    alt="github-icon"
                                 />
                             </a>
                             <a
-                                href="https://www.linkedin.com/company/theshortcut/"
+                                href="https://www.instagram.com/olovok33/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
                                 <img
                                     src={require("../images/instagram-icon.png")}
-                                    alt="linkedin-icon"
+                                    alt="insta-icon"
                                 />
                             </a>
                         </footer>
