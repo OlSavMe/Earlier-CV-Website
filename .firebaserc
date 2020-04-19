@@ -1,5 +1,6 @@
 {
   "projects": {
-    "staging": "ducks-e5299"
+    "staging": "ducks-e5299",
+    "default": "ducks-e5299"
   }
 }

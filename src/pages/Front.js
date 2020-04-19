@@ -2,11 +2,9 @@ import React from 'react';
 import '../styles/Front.scss';
 import '../App.scss';
 import bannervideo from '../images/ducks.mp4';
-// import photo from '../images/phto.jpeg';
-// import photo from '../images/phbig.jpeg';
+import poster from '../images/backimg.jpeg';
 import { Link } from "react-router-dom";
 
-import BottomNav from '../components/BottomNavigation';
 
 
 export default function Front() {
@@ -17,7 +15,8 @@ export default function Front() {
             <video
                 autoPlay
                 muted
-                loop>
+                loop
+                poster={poster}>
                 <source src={bannervideo} type="video/mp4" />
             </video>
             <div className='container'>
@@ -93,7 +92,16 @@ export default function Front() {
                     </div>
 
                 </div>
-
+                <section className='hash'>
+                    <h2>#React</h2>
+                    <h2>#Azure DevOps</h2>
+                    <h2>#JavaScript</h2>
+                    <h2>#SASS/SCSS</h2>
+                    <h2>#React</h2>
+                    <h2>#Azure DevOps</h2>
+                    <h2>#JavaScript</h2>
+                    <h2>#SASS/SCSS</h2>
+                </section>
 
             </div>
         </div >
