@@ -1,51 +1,305 @@
 import React from "react";
 import '../styles/EducationStyles.scss';
-import { Link } from "react-router-dom";
+import bannervideo from '../images/ducks.mp4';
+import poster from '../images/backimg.jpeg';
+import { makeStyles } from '@material-ui/core/styles';
+import ExpansionPanel from '@material-ui/core/ExpansionPanel';
+import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+import Typography from '@material-ui/core/Typography';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import InsertLinkIcon from '@material-ui/icons/InsertLink';
+
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+        width: '100%',
+    },
+    heading: {
+        fontSize: theme.typography.pxToRem(16),
+        // flexBasis: '33.33%',
+        flexShrink: '50%',
+    },
+    secondaryHeading: {
+        fontSize: theme.typography.pxToRem(18),
+        color: theme.palette.text.secondary,
+        paddingLeft: '5%',
+    },
+}));
+
 
 
 export default function Education() {
+    const classes = useStyles();
+    const [expanded, setExpanded] = React.useState(false);
 
+    const handleChange = (panel) => (event, isExpanded) => {
+        setExpanded(isExpanded ? panel : false);
+    };
     return (
         <div className='edu'>
 
             <div className='container'>
-
-                <div className='links'>
-                    <menu>
-
-                        <Link to="/">
-                            OlgaSavka
-                </Link>
-                        <Link to="/edu">
-                            Experience
-                </Link>
-                        <Link to="/portfolio">
-                            Portfolio
-                </Link>
-
-                    </menu>
+                <h1>Haaga Helia UAS 2017-2020 (242 cr GPA 4.08)</h1>
+                <h3>Software Development Path</h3>
+                <div className={classes.root}>
+                    <ExpansionPanel expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+                        <ExpansionPanelSummary
+                            expandIcon={<ExpandMoreIcon />}
+                            aria-controls="panel1bh-content"
+                            id="panel1bh-header"
+                        >
+                            <Typography className={classes.heading}>Froont End Development, 5cr</Typography>
+                            <Typography className={classes.secondaryHeading}><a href="http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022">{<InsertLinkIcon />}</a></Typography>
+                        </ExpansionPanelSummary>
+                        <ExpansionPanelDetails>
+                            <Typography>
+                                The set of needed tools and their relevance
+                                Mastering HTML, CSS, JavaScript, browser developer tools, e.g. JavaScript debugger and JavaScript console
+                                Verification and error-tracking
+                                Document Object Model, Browser Object Model and their relationship and linkages with JS,
+                                The JS "environment". That is JavaScript objects and functions loaded into browser memory. JavaScript libraries. (Using jQuery as an example)
+                                Understanding how much can be done at the front-end without back-end. Even a Single-Page Application (SPA)
+                                Request-Response model. Understanding http GET and POST requests. Understanding how the browser communicates with the web server.
+                                Understanding how to connect to the back-end. Understanding how to specify and use back-end services in the front-end.
+                                Creating different kind of front-ends that use the given ready-made back-end services
+                                AJAX request-response model.
+                                JSON as AJAX response format
+                                (XML as AJAX response format)
+                                jQuery, Bootstrap
+                                Responsive web pages with Media Queries.
+                                "CSS3”. E.g. using variables in style rules
+                                “HTML5”: E.g. Drag-and-drop, local store, geolocation, canvas and charts
+                                A small selection of JS front-end frameworks (Angular, ReactJS?) walked through
+                                Understanding of which areas student doesn’t know at the end.
+          </Typography>
+                        </ExpansionPanelDetails>
+                    </ExpansionPanel>
+                    <ExpansionPanel expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+                        <ExpansionPanelSummary
+                            expandIcon={<ExpandMoreIcon />}
+                            aria-controls="panel2bh-content"
+                            id="panel2bh-header"
+                        >
+                            <Typography className={classes.heading}>Users</Typography>
+                            <Typography className={classes.secondaryHeading}>
+                                You are currently not an owner
+          </Typography>
+                        </ExpansionPanelSummary>
+                        <ExpansionPanelDetails>
+                            <Typography>
+                                Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus, varius pulvinar
+                                diam eros in elit. Pellentesque convallis laoreet laoreet.
+          </Typography>
+                        </ExpansionPanelDetails>
+                    </ExpansionPanel>
+                    <ExpansionPanel expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
+                        <ExpansionPanelSummary
+                            expandIcon={<ExpandMoreIcon />}
+                            aria-controls="panel3bh-content"
+                            id="panel3bh-header"
+                        >
+                            <Typography className={classes.heading}>Mobile App Development Using React Native, 3 cr</Typography>
+                            <Typography className={classes.secondaryHeading}>
+                                <a href="http://opinto-opas.metropolia.fi/en/tarjontakorit/en/54819">link</a>
+                            </Typography>
+                        </ExpansionPanelSummary>
+                        <ExpansionPanelDetails>
+                            <Typography>
+                                This course provides an introduction to mobile application development using React Native. The concepts covered by the course include: React, React Native, Expo and Snack; component, prop, state, style, layout, image, text input, touch handling, HTTP, and deployment. The overall goal of the course is to familiarize students with basic React Native concepts and development skills.
+                                Objectives of the course are:
+                                
+          </Typography>
+                        </ExpansionPanelDetails>
+                    </ExpansionPanel>
+                    <ExpansionPanel expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
+                        <ExpansionPanelSummary
+                            expandIcon={<ExpandMoreIcon />}
+                            aria-controls="panel4bh-content"
+                            id="panel4bh-header"
+                        >
+                            <Typography className={classes.heading}></Typography>
+                        </ExpansionPanelSummary>
+                        <ExpansionPanelDetails>
+                            <Typography>
+                                Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit amet egestas eros,
+                                vitae egestas augue. Duis vel est augue.
+          </Typography>
+                        </ExpansionPanelDetails>
+                    </ExpansionPanel>
                 </div>
-                <div className='profile'>
-
-                    <div className="desc">
-                        <h2>Hello! I am Olga</h2>
-                        <h2>Frontend Developer</h2>
-                        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tincidunt praesent semper feugiat nibh sed. Proin sagittis nisl rhoncus mattis rhoncus urna neque viverra. Orci eu lobortis elementum nibh tellus molestie. Quis viverra nibh cras pulvinar mattis nunc sed blandit. Senectus et netus et malesuada fames ac. Pellentesque habitant morbi tristique senectus et netus. Porta nibh venenatis cras sed felis eget velit aliquet. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Ut pharetra sit amet aliquam id diam. Aliquam faucibus purus in massa tempor nec feugiat nisl. Lectus nulla at volutpat diam. Leo in vitae turpis massa sed elementum tempus egestas sed. Enim tortor at auctor urna nunc id cursus metus. Quis commodo odio aenean sed adipiscing diam donec adipiscing. Sit amet consectetur adipiscing elit duis tristique.
-
-                        Leo duis ut diam quam nulla. Ante in nibh mauris cursus mattis molestie a. In nisl nisi scelerisque eu ultrices vitae auctor eu augue. Enim nunc faucibus a pellentesque sit amet porttitor. Ultrices sagittis orci a scelerisque purus. Nunc scelerisque viverra mauris in aliquam sem. Urna cursus eget nunc scelerisque. Id cursus metus aliquam eleifend. Placerat in egestas erat imperdiet sed euismod nisi porta lorem. Faucibus pulvinar elementum integer enim neque volutpat ac tincidunt. Congue eu consequat ac felis donec et odio pellentesque diam. Massa id neque aliquam vestibulum morbi blandit cursus risus. Sollicitudin nibh sit amet commodo. Erat velit scelerisque in dictum non consectetur a. Fusce ut placerat orci nulla. Fames ac turpis egestas maecenas pharetra. Nisl pretium fusce id velit ut tortor pretium. Nam libero justo laoreet sit. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra.
-
-                        Vel pretium lectus quam id leo in. Turpis tincidunt id aliquet risus feugiat in. Facilisi etiam dignissim diam quis. Adipiscing bibendum est ultricies integer quis auctor elit sed. Diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. At risus viverra adipiscing at in tellus integer. Velit scelerisque in dictum non consectetur a erat nam. Et molestie ac feugiat sed lectus vestibulum mattis ullamcorper. Ac odio tempor orci dapibus ultrices in iaculis nunc sed. Maecenas sed enim ut sem viverra. Volutpat maecenas volutpat blandit aliquam. Risus at ultrices mi tempus imperdiet. Vestibulum lectus mauris ultrices eros. Malesuada nunc vel risus commodo viverra.
-
-                        Vulputate dignissim suspendisse in est ante in nibh mauris cursus. Eu sem integer vitae justo. Sed viverra tellus in hac habitasse platea dictumst vestibulum. Eget duis at tellus at urna condimentum mattis pellentesque. Nunc non blandit massa enim nec dui nunc mattis. Mauris vitae ultricies leo integer. Mollis nunc sed id semper risus in hendrerit gravida rutrum. Mauris ultrices eros in cursus turpis massa tincidunt dui ut. At varius vel pharetra vel turpis nunc eget lorem. Cras pulvinar mattis nunc sed blandit. Id ornare arcu odio ut. Eu feugiat pretium nibh ipsum consequat nisl vel pretium lectus. Diam vulputate ut pharetra sit amet aliquam id diam maecenas. Odio ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. Facilisis leo vel fringilla est ullamcorper eget. Eget mauris pharetra et ultrices neque ornare aenean. Lectus proin nibh nisl condimentum id venenatis a condimentum vitae. Elementum pulvinar etiam non quam lacus suspendisse faucibus. Eu ultrices vitae auctor eu augue ut lectus.
-
-                        Eget egestas purus viverra accumsan in nisl nisi scelerisque eu. Morbi quis commodo odio aenean sed adipiscing diam donec. Leo duis ut diam quam. Congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque. Eget lorem dolor sed viverra. Eget egestas purus viverra accumsan in nisl nisi scelerisque eu. Maecenas volutpat blandit aliquam etiam erat velit scelerisque in dictum. Nibh ipsum consequat nisl vel pretium lectus quam. Ullamcorper a lacus vestibulum sed arcu non odio euismod. Pellentesque adipiscing commodo elit at imperdiet dui accumsan sit. Tortor at auctor urna nunc. Dictum at tempor commodo ullamcorper a lacus. In nibh mauris cursus mattis molestie a iaculis. Est ultricies integer quis auctor elit sed vulputate mi sit. Semper feugiat nibh sed pulvinar proin. Potenti nullam ac tortor vitae purus faucibus ornare suspendisse sed.
-
-Nulla porttitor massa id neque aliquam vestibulum morbi blandit cursus. Volutpat consequat mauris nunc congue nisi vitae suscipit. Mattis enim ut tellus elementum sagittis vitae et leo. Ornare lectus sit amet est placerat in egestas. Donec ac odio tempor orci. Sit amet est placerat in. Enim nulla aliquet porttitor lacus luctus accumsan tortor. Quis blandit turpis cursus in hac. Mi quis hendrerit dolor magna. Id interdum velit laoreet id donec ultrices tincidunt arcu non. Lacus sed viverra tellus in hac habitasse. Sapien eget mi proin sed libero enim sed.</h2>
-
-                    </div>
-
+                <h3>ICT Infrastructure Path</h3>
+                <div className={classes.root}>
+                    <ExpansionPanel expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+                        <ExpansionPanelSummary
+                            expandIcon={<ExpandMoreIcon />}
+                            aria-controls="panel1bh-content"
+                            id="panel1bh-header"
+                        >
+                            <Typography className={classes.heading}>Froont End Development</Typography>
+                            <Typography className={classes.secondaryHeading}><a href="http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022">link</a></Typography>
+                        </ExpansionPanelSummary>
+                        <ExpansionPanelDetails>
+                            <Typography>
+                                The set of needed tools and their relevance
+                                Mastering HTML, CSS, JavaScript, browser developer tools, e.g. JavaScript debugger and JavaScript console
+                                Verification and error-tracking
+                                Document Object Model, Browser Object Model and their relationship and linkages with JS,
+                                The JS "environment". That is JavaScript objects and functions loaded into browser memory. JavaScript libraries. (Using jQuery as an example)
+                                Understanding how much can be done at the front-end without back-end. Even a Single-Page Application (SPA)
+                                Request-Response model. Understanding http GET and POST requests. Understanding how the browser communicates with the web server.
+                                Understanding how to connect to the back-end. Understanding how to specify and use back-end services in the front-end.
+                                Creating different kind of front-ends that use the given ready-made back-end services
+                                AJAX request-response model.
+                                JSON as AJAX response format
+                                (XML as AJAX response format)
+                                jQuery, Bootstrap
+                                Responsive web pages with Media Queries.
+                                "CSS3”. E.g. using variables in style rules
+                                “HTML5”: E.g. Drag-and-drop, local store, geolocation, canvas and charts
+                                A small selection of JS front-end frameworks (Angular, ReactJS?) walked through
+                                Understanding of which areas student doesn’t know at the end.
+          </Typography>
+                        </ExpansionPanelDetails>
+                    </ExpansionPanel>
+                    <ExpansionPanel expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+                        <ExpansionPanelSummary
+                            expandIcon={<ExpandMoreIcon />}
+                            aria-controls="panel2bh-content"
+                            id="panel2bh-header"
+                        >
+                            <Typography className={classes.heading}>Users</Typography>
+                            <Typography className={classes.secondaryHeading}>
+                                You are currently not an owner
+          </Typography>
+                        </ExpansionPanelSummary>
+                        <ExpansionPanelDetails>
+                            <Typography>
+                                Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus, varius pulvinar
+                                diam eros in elit. Pellentesque convallis laoreet laoreet.
+          </Typography>
+                        </ExpansionPanelDetails>
+                    </ExpansionPanel>
+                    <ExpansionPanel expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
+                        <ExpansionPanelSummary
+                            expandIcon={<ExpandMoreIcon />}
+                            aria-controls="panel3bh-content"
+                            id="panel3bh-header"
+                        >
+                            <Typography className={classes.heading}>Advanced settings</Typography>
+                            <Typography className={classes.secondaryHeading}>
+                                Filtering has been entirely disabled for whole web server
+          </Typography>
+                        </ExpansionPanelSummary>
+                        <ExpansionPanelDetails>
+                            <Typography>
+                                Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit amet egestas eros,
+                                vitae egestas augue. Duis vel est augue.
+          </Typography>
+                        </ExpansionPanelDetails>
+                    </ExpansionPanel>
+                    <ExpansionPanel expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
+                        <ExpansionPanelSummary
+                            expandIcon={<ExpandMoreIcon />}
+                            aria-controls="panel4bh-content"
+                            id="panel4bh-header"
+                        >
+                            <Typography className={classes.heading}>Personal data</Typography>
+                        </ExpansionPanelSummary>
+                        <ExpansionPanelDetails>
+                            <Typography>
+                                Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit amet egestas eros,
+                                vitae egestas augue. Duis vel est augue.
+          </Typography>
+                        </ExpansionPanelDetails>
+                    </ExpansionPanel>
                 </div>
-
+                <h3>Digital Services and BI Path</h3>
+                <div className={classes.root}>
+                    <ExpansionPanel expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+                        <ExpansionPanelSummary
+                            expandIcon={<ExpandMoreIcon />}
+                            aria-controls="panel1bh-content"
+                            id="panel1bh-header"
+                        >
+                            <Typography className={classes.heading}>Froont End Development</Typography>
+                            <Typography className={classes.secondaryHeading}><a href="http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022">link</a></Typography>
+                        </ExpansionPanelSummary>
+                        <ExpansionPanelDetails>
+                            <Typography>
+                                The set of needed tools and their relevance
+                                Mastering HTML, CSS, JavaScript, browser developer tools, e.g. JavaScript debugger and JavaScript console
+                                Verification and error-tracking
+                                Document Object Model, Browser Object Model and their relationship and linkages with JS,
+                                The JS "environment". That is JavaScript objects and functions loaded into browser memory. JavaScript libraries. (Using jQuery as an example)
+                                Understanding how much can be done at the front-end without back-end. Even a Single-Page Application (SPA)
+                                Request-Response model. Understanding http GET and POST requests. Understanding how the browser communicates with the web server.
+                                Understanding how to connect to the back-end. Understanding how to specify and use back-end services in the front-end.
+                                Creating different kind of front-ends that use the given ready-made back-end services
+                                AJAX request-response model.
+                                JSON as AJAX response format
+                                (XML as AJAX response format)
+                                jQuery, Bootstrap
+                                Responsive web pages with Media Queries.
+                                "CSS3”. E.g. using variables in style rules
+                                “HTML5”: E.g. Drag-and-drop, local store, geolocation, canvas and charts
+                                A small selection of JS front-end frameworks (Angular, ReactJS?) walked through
+                                Understanding of which areas student doesn’t know at the end.
+          </Typography>
+                        </ExpansionPanelDetails>
+                    </ExpansionPanel>
+                    <ExpansionPanel expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+                        <ExpansionPanelSummary
+                            expandIcon={<ExpandMoreIcon />}
+                            aria-controls="panel2bh-content"
+                            id="panel2bh-header"
+                        >
+                            <Typography className={classes.heading}>Users</Typography>
+                            <Typography className={classes.secondaryHeading}>
+                                You are currently not an owner
+          </Typography>
+                        </ExpansionPanelSummary>
+                        <ExpansionPanelDetails>
+                            <Typography>
+                                Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus, varius pulvinar
+                                diam eros in elit. Pellentesque convallis laoreet laoreet.
+          </Typography>
+                        </ExpansionPanelDetails>
+                    </ExpansionPanel>
+                    <ExpansionPanel expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
+                        <ExpansionPanelSummary
+                            expandIcon={<ExpandMoreIcon />}
+                            aria-controls="panel3bh-content"
+                            id="panel3bh-header"
+                        >
+                            <Typography className={classes.heading}>Advanced settings</Typography>
+                            <Typography className={classes.secondaryHeading}>
+                                Filtering has been entirely disabled for whole web server
+          </Typography>
+                        </ExpansionPanelSummary>
+                        <ExpansionPanelDetails>
+                            <Typography>
+                                Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit amet egestas eros,
+                                vitae egestas augue. Duis vel est augue.
+          </Typography>
+                        </ExpansionPanelDetails>
+                    </ExpansionPanel>
+                    <ExpansionPanel expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
+                        <ExpansionPanelSummary
+                            expandIcon={<ExpandMoreIcon />}
+                            aria-controls="panel4bh-content"
+                            id="panel4bh-header"
+                        >
+                            <Typography className={classes.heading}>Personal data</Typography>
+                        </ExpansionPanelSummary>
+                        <ExpansionPanelDetails>
+                            <Typography>
+                                Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit amet egestas eros,
+                                vitae egestas augue. Duis vel est augue.
+          </Typography>
+                        </ExpansionPanelDetails>
+                    </ExpansionPanel>
+                </div>
 
             </div>
         </div >

@@ -40,7 +40,8 @@
     height: 100%;
     margin: 0;
     justify-items: center;
-    scroll-behavior: smooth;
+    overflow: hidden;
+  
     
 
 video {
@@ -51,7 +52,7 @@ video {
     top: 0;
     left: 0;
     z-index: -100;
-    background-color: wheat;;
+    background-color: wheat;
     
   }
 
@@ -64,18 +65,19 @@ video {
   justify-content:  flex-start;
   color: white;
   position: relative;
-
   overflow: scroll;
-  margin: 1rem auto 0;
+  scroll-behavior: smooth;
+  margin: auto;
   padding:  0 0 50% 10%;
   height: 100vh;
   // background:rgba(70,111,155,0.6);
   background:rgba(0,0,0,0.4);
+  // box-shadow: 12px 0 15px -4px rgba(0,0,0,0.3), -12px 0 8px -4px rgba(0,0,0,0.3);
 
     
   @include phone {
     width: 100%;
-    margin: 0.5rem auto 0;
+    margin: auto;
   }
 
 
@@ -91,19 +93,7 @@ video {
        @include tablet-landscape {
         width: 90%;
        }
-  
-  
-    // .links{
-    //   display: flex;
-    //     flex-direction: column;
-    //     flex-wrap: wrap;
-    //     font-weight: normal;
-    //     font-size: 3rem;
 
-         
-    //     @include phone  {
-    //       flex-direction: row;
-    //     }
        
 
         menu {
@@ -149,18 +139,7 @@ video {
           >img {
             max-height: 2rem;
           }
-          
-          // @include phone  {
-          //   max-height: 1rem;;
-          //   border-bottom: none;}
-
-            // @include tablet {
-            //   min-height: 2rem;;
-            //   margin-bottom: 1rem;}
-              
-          //     @include tablet-landscape {
-          //       min-height: 2rem;;
-          //       margin-bottom: 1rem;}
+        
 
           >a{
             color:white;
@@ -210,25 +189,7 @@ video {
         flex-wrap: wrap;
         justify-content: space-around; 
         margin-right: 20%; 
-        // padding-left: 15%; 
-        // padding-top: 5%; 
-        // min-width: 400px;
-        
-        
-        // @include desktop{
-        //  min-width: 400px;
-       
-        //    }
-        //    @include big-desktop{
-        //     min-width: 470px;
-          
-        //       }
-
-
-        //  @include tablet-landscape {
-        //   min-width:  370px;
-        
-        //     }
+      
 
             @include phone{
               min-width:  0;

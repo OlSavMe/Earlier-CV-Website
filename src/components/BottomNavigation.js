@@ -15,6 +15,8 @@ import './BottomNavigationStyle.scss';
 export default function BottomNav() {
     const appBarStyle = {
         top: 0,
+        left: 0,
+        right: 0,
         backgroundColor: '#ffffff00',
 
     };

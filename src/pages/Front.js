@@ -93,14 +93,16 @@ export default function Front() {
 
                 </div>
                 <section className='hash'>
-                    <h2>#React</h2>
-                    <h2>#Azure DevOps</h2>
                     <h2>#JavaScript</h2>
-                    <h2>#SASS/SCSS</h2>
                     <h2>#React</h2>
-                    <h2>#Azure DevOps</h2>
-                    <h2>#JavaScript</h2>
+                    <h2>#Redux</h2>
                     <h2>#SASS/SCSS</h2>
+                    <h2>#ES6/JSX</h2>
+                    <h2>#Material UI</h2>
+                    <h2>#Azure DevOps</h2>
+                    <h2>#Circle CI</h2>
+                    <h2>#WordPress</h2>
+                    <h2>#Java</h2>
                 </section>
 
             </div>
