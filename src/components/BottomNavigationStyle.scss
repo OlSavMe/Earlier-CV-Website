@@ -1,7 +1,9 @@
 @media screen and (max-width: 768px) {
     header.bottom-navigation {
       position: relative;
-      box-shadow: 0 -15px 15px -15px inset rgba(0,0,0,0.3);
+      // box-shadow: 0 -15px 15px -15px inset rgba(0,0,0,0.3);
+      // box-shadow: hue($color: #000000);
+      box-shadow: none;
    
       > div.MuiBottomNavigation-root {
         background-color:  transparent;
@@ -15,7 +17,7 @@
             background-color: transparent;
           }
           >a.MuiBottomNavigationAction-root.Mui-selected {
-            color: lightslategray;
+            color: green;
           }
       }
     }}
@@ -24,7 +26,9 @@
     @media screen and (min-width: 769px) {
       header.bottom-navigation {
         position: relative;
-        box-shadow: 0 -15px 15px -15px inset rgba(0,0,0,0.3);
+        // box-shadow: 0 -15px 15px -15px inset rgba(0,0,0,0.3);
+        // box-shadow: hue($color: #000000);
+        box-shadow: none;
       
 
         // 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px
@@ -37,7 +41,8 @@
             background-color:  transparent;
             }
             >a.MuiButtonBase-root {
-padding: 1.5rem;
+padding: 1rem;
+margin: 2rem 2.5rem 0 0;
             }
             >a.MuiBottomNavigationAction-root{
               background-color: transparent;
@@ -54,7 +59,7 @@ justify-content: center;
               }
             }
             >a.MuiBottomNavigationAction-root.Mui-selected {
-              color: lightslategray;
+              color: green;
             }
         }
       }}

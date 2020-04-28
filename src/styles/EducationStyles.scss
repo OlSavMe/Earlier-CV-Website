@@ -39,7 +39,7 @@
   height: 100vh;
   justify-items: center;
   scroll-behavior: smooth;
-  background-color: white;
+  background-color: lightgrey;
 
   video {
     object-fit: cover;
@@ -70,10 +70,14 @@ background-color: lightgrey;
 // box-shadow: -15px 0 15px -15px inset rgba(0,0,0,0.3);
 // box-shadow: 12px 0 15px -4px rgba(0,0,0,0.3), -12px 0 8px -4px rgba(0,0,0,0.3);
 
-
+>h3 {
+  color: green;
+}
   
 @include phone {
   width: 100%;}
   margin: auto;
 }
+
+
 }

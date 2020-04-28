@@ -19,6 +19,7 @@ export default function Front() {
                 poster={poster}>
                 <source src={bannervideo} type="video/mp4" />
             </video>
+
             <div className='container'>
 
                 <menu>

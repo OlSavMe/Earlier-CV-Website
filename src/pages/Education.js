@@ -1,7 +1,5 @@
 import React from "react";
 import '../styles/EducationStyles.scss';
-import bannervideo from '../images/ducks.mp4';
-import poster from '../images/backimg.jpeg';
 import { makeStyles } from '@material-ui/core/styles';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
@@ -40,7 +38,7 @@ export default function Education() {
         <div className='edu'>
 
             <div className='container'>
-                <h1>Haaga Helia UAS 2017-2020 (242 cr GPA 4.08)</h1>
+                <h1>Haaga Helia UAS 2017-2020 (257 cr GPA 4.08)</h1>
                 <h3>Software Development Path</h3>
                 <div className={classes.root}>
                     <ExpansionPanel expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
@@ -50,7 +48,7 @@ export default function Education() {
                             id="panel1bh-header"
                         >
                             <Typography className={classes.heading}>Froont End Development, 5cr</Typography>
-                            <Typography className={classes.secondaryHeading}><a href="http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022">{<InsertLinkIcon />}</a></Typography>
+                            <Typography className={classes.secondaryHeading}><a href="http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022">{<InsertLinkIcon />} </a></Typography>
                         </ExpansionPanelSummary>
                         <ExpansionPanelDetails>
                             <Typography>
