@@ -22,32 +22,14 @@ export default function Front() {
 
             <div className='container'>
 
-                <menu>
-                    <div><img
-                        src={require("../images/workers.png")} />
-                        <Link to="/edu">
-                            Career
-                    </Link></div>
-                    <div><img
-                        src={require("../images/web.png")} />
-                        <Link to="/portfolio">
-                            Portfolio
-                    </Link></div>
-                    <div><img
-                        src={require("../images/brain.png")} />
-                        <Link to="/edu">
-                            Education
-                    </Link></div>
-                </menu>
-
 
                 <div className='profile'>
                     <div className="visual">
                     </div>
 
                     <div className="desc">
-                        <h2>Hello! I am Olga</h2>
-                        <h2>Frontend Developer</h2>
+                        <h2>Olga Savka</h2>
+                        <h2>Web Developer</h2>
                         {/* <h3>JavaScript/React/SASS</h3> */}
                         <h3> <img
                             src={require("../images/marker.png")}
@@ -94,7 +76,22 @@ export default function Front() {
 
                 </div>
                 <section className='hash'>
-                    <h2>#JavaScript</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                    aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                    cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                    aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                    cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                        anim id est laborum.</p>
+                    {/* <h2>#JavaScript</h2>
                     <h2>#React</h2>
                     <h2>#Redux</h2>
                     <h2>#SASS/SCSS</h2>
@@ -103,10 +100,12 @@ export default function Front() {
                     <h2>#Azure DevOps</h2>
                     <h2>#Circle CI</h2>
                     <h2>#WordPress</h2>
-                    <h2>#Java</h2>
+                    <h2>#Java</h2> */}
                 </section>
 
+                <section className='empty'></section>
             </div>
+
         </div >
 
 

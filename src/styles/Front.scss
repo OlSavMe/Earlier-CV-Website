@@ -36,14 +36,11 @@
 
 
 .front {
-    // font-family: 'Syncopate', sans-serif;
     height: 100%;
     margin: 0;
     justify-items: center;
     overflow: hidden;
-    // background:rgba(0,0,0,0.4);
-  
-    
+   
 
 video {
     object-fit: cover;
@@ -61,22 +58,26 @@ video {
 
 .container {
   width: 80%;
+  flex: 1;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content:  flex-start;
+  // justify-content:  flex-start;
   color: white;
-  position: relative;
+  position: fixed;
+  margin: 8vh auto; /* Will not center vertically and won't work in IE6/7. */
+left: 0;
+right: 0;
   overflow: scroll;
   scroll-behavior: smooth;
-  margin: auto;
-  padding:  0 0 100% 10%;
+  padding: 5%;
   height: 100vh;
-  background:rgba(0,0,0,0.4);
+  background:rgba(0,0,0,0.5);
   // box-shadow: 0px 0 15px -3px rgba(0,0,0,0.3), -12px 0 8px -3px rgba(0,0,0,0.3);
 
     
   @include phone {
+    position: relative;
     width: 100%;
     margin: auto;
   }
@@ -84,124 +85,20 @@ video {
 
     @include big-desktop{
       width: 60%;
+ 
 
     }
 
       @include tablet {
         width: 90%;
+ 
        }
 
        @include tablet-landscape {
         width: 90%;
+      
        }
 
-       .wave::before{
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background-repeat: repeat-x;
-        height: 10px;
-        background-size: 20px 20px;
-        background-image: radial-gradient(circle at 10px -5px, transparent 12px, white 13px);
-      }
-      .wave::after{
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background-repeat: repeat-x;
-        height: 15px;
-        background-size: 40px 20px;
-        background-image: radial-gradient(circle at 10px 15px, white 12px, transparent 13px);
-      } 
-
-        menu {
-          display: none;
-        flex-direction: column;
-        flex-wrap: wrap;
-        font-weight: normal;
-        font-size: 3rem;
-         margin: 0 0 3rem 0;
-         position: relative; 
-         max-width: 360px;
-         padding: 0;
-
-         @include phone {
-           display: none;
-          flex-direction: row;
-          // min-width: 100%;
-          // margin: 0;
-          // justify-content: center;
-      visibility: hidden;
-        }
-      
-
-
-         >div{
-          min-height: 5rem;;
-          display: flex;
-          align-items: center;
-          position: relative;
-          list-style: none;
-          overflow: hidden;  
-          margin-bottom: 1rem;
-          padding: 1rem;
-          cursor: pointer;
-          background-color: rgba(225,225,225,0.4);
-          // border-bottom: 3px solid white;
-          // clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 0% 100%, 0% 100%);
-         
-          &:hover {
-            background-color: rgba(225,225,225,0.6);
-          }
-
-          >img {
-            max-height: 2rem;
-          }
-        
-
-          >a{
-            color:white;
-            font-weight: normal;
-            font-size: 2rem;
-            padding: 1rem;
-            // text-decoration: none;
-            // text-indent: 24px;
-            &:hover {
-              text-decoration: none;
-            }
-
-            @include phone {
-              // font-size: 1rem;
-              // padding: 0.5rem 5rem 0.5rem;
-              // font-style: bold;
-              line-height: 0; 
-    font-size: 0;
-    color: transparent; 
-          
-              }
-
-              @include tablet {
-                font-size: 1rem;
-               }
-
-               @include tablet-landscape {
-                font-size: 1rem;
-               }
-         
-         
-          }
-
-       
-          
-         }
-     
-
-    }
-  
     
   
 
@@ -209,21 +106,18 @@ video {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        justify-content: space-around; 
-        margin-right: 20%; 
+        margin-right: 0; 
       
-
             @include phone{
               min-width:  0;
               margin-right: 10%; 
               box-sizing: unset;
-            
-                }
+            }
 
           
         .visual {
-            width: 250px;
-            height: 351px;
+            width: auto;
+            height: 285px;
             position:relative;
             background: url('ph.jpeg') no-repeat;
             background-position: center;
@@ -232,17 +126,7 @@ video {
             @include phone {
               background-size: 200px auto;
               background-position-x: 0em;
-              // clip-path: polygon(
-              //   20% 10%,
-              //   90% 0%,
-              //   90% 50%,
-              //   0 calc(100% - 30vw));
-              // clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
-
-             
-
-
-          }}
+           }}
           
       
           .desc {
@@ -251,8 +135,6 @@ video {
               padding: 1rem 0;
               // color: RGB (249,240,212);
             
-      
-      
       
         >h2 {
          list-style-type: none;
@@ -291,27 +173,23 @@ video {
            }
 
            img{
-padding-right: 1rem;
-height: 30px;
-width: auto;
+              padding-right: 1rem;
+              height: 30px;
+              width: auto;
 
-@include phone {
-  padding-right:  0.5rem;
-height: 20px;
-}
-
-           }
-
-
-        }
+            @include phone {
+                padding-right:  0.5rem;
+                height: 20px;
+                }
+              }
+            }
   
      
     @include phone {
         width: 100%;
         padding: 2rem 0;
       }
-  
-}
+    }
 
 footer {
   display: flex;
@@ -329,39 +207,44 @@ footer {
       &:hover {
           opacity: 0.5;
         }
-        // &:first-of-type {
-        //   padding-left: 1rem;
-        // }
+
         @include phone {
           height: 50px;
-
         }
     }
     @include phone {
       width: 100%;
       padding: 1rem 0;
-    
+     }
+    } 
+  }
 
-    }
-    
-} 
-
-}
 .hash{
-  margin-top: 3rem;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0 0 0 6%;
+
+ 
+
+  >p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+
  
  @include phone {
-
-  margin-top: 1rem;
-}
-
-// @include tablet-landscape {
-//   padding: 0 4rem;
-// }
+  padding: 0;
 }
 
 }
 
+.empty {
+  height: 3000px;
+}
+}
 
 
 }

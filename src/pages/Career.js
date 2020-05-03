@@ -32,7 +32,7 @@ export default function Career() {
     }, []);
 
     const getXs = async () => {
-        await Axios.get("https://api.github.com/users/OlSavMe/repos").then(
+        await Axios.get("https://api.github.com/users/OlSavMe/repos?per_page=100").then(
             response => {
                 setRepos(response.data);
                 // setFiltered(repos.filter(repo => repo.language === `${selectedValue}`));
@@ -74,15 +74,15 @@ export default function Career() {
                 onChange={handleChange} // assign onChange function
             />
 
-            <ul>
-                {filtered.map((repo) =>
+            <ol>
+                {repos.map((repo) =>
                     <li key={repo.id}>
                         <a href={repo.html_url} target="_blank"> {repo.name}</a>
                         <p>{repo.description}</p>
                     </li>
                 )
                 }
-            </ul>
+            </ol>
 
         </div >
     );

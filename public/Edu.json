@@ -1,170 +1,182 @@
 {
-    "software_dev": [
+    "paths": [
         {
-            "title": "Front End Development",
-            "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
-            "desc": "Bootstrap, jQuery, Media Queries, Single-Page Application, Request-Response model, GET and POST requests, connecting to the back-end, AJAX request-response model, JSON as AJAX response format"
+            "name": "Software Development Path"
         },
         {
-            "title": "Front End Development",
-            "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
-            "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
+            "name": "ICT Infrastructure Path"
         },
         {
-            "title": "Front End Development",
-            "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
-            "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
+            "name": "Digital Services and BI Path"
         },
         {
-            "title": "Front End Development",
-            "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
-            "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
-        },
-        {
-            "title": "Front End Development",
-            "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
-            "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
-        },
-        {
-            "title": "Front End Development",
-            "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
-            "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
-        },
-        {
-            "title": "Front End Development",
-            "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
-            "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
-        },
-        {
-            "title": "Front End Development",
-            "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
-            "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
+            "name": "Languages"
         }
     ],
-    "ict_infra": [
+    "sections": [
         {
-            "title": "Front End Development",
-            "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
-            "desc": "Bootstrap, jQuery, Media Queries, Single-Page Application, Request-Response model, GET and POST requests, connecting to the back-end, AJAX request-response model, JSON as AJAX response format"
+            "name": "Software Development",
+            "courses": [
+                {
+                    "id": 19,
+                    "title": "Front End Development",
+                    "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
+                    "desc": "Bootstrap, jQuery, Media Queries, Single-Page Application, Request-Response model, GET and POST requests, connecting to the back-end, AJAX request-response model, JSON as AJAX response format"
+                },
+                {
+                    "id": 20,
+                    "title": "Front End Development",
+                    "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
+                    "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
+                },
+                {
+                    "id": 21,
+                    "title": "Development",
+                    "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
+                    "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
+                },
+                {
+                    "id": 22,
+                    "title": "Front",
+                    "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
+                    "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
+                },
+                {
+                    "id": 23,
+                    "title": "Front End Development",
+                    "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
+                    "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
+                },
+                {
+                    "id": 24,
+                    "title": "Front End Development",
+                    "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
+                    "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
+                }
+            ]
         },
         {
-            "title": "Front End Development",
-            "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
-            "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
+            "name": "ICT Infrastructure",
+            "courses": [
+                {
+                    "id": 1,
+                    "title": "Infrastructure End Development, 5cr",
+                    "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
+                    "desc": "Bootstrap, jQuery, Media Queries, Single-Page Application, Request-Response model, GET and POST requests, connecting to the back-end, AJAX request-response model, JSON as AJAX response format"
+                },
+                {
+                    "id": 2,
+                    "title": "Front End Infrastructure",
+                    "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
+                    "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
+                },
+                {
+                    "id": 3,
+                    "title": "Front End Development",
+                    "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
+                    "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
+                },
+                {
+                    "id": 4,
+                    "title": "Front Infrastructure Development",
+                    "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
+                    "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
+                },
+                {
+                    "id": 5,
+                    "title": "Front End Development",
+                    "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
+                    "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
+                },
+                {
+                    "id": 6,
+                    "title": "Front End Development",
+                    "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
+                    "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
+                }
+            ]
         },
         {
-            "title": "Front End Development",
-            "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
-            "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
+            "name": "Digital Services and BI",
+            "courses": [
+                {
+                    "id": 7,
+                    "title": "Front End Development, 5cr",
+                    "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
+                    "desc": "Bootstrap, jQuery, Media Queries, Single-Page Application, Request-Response model, GET and POST requests, connecting to the back-end, AJAX request-response model, JSON as AJAX response format"
+                },
+                {
+                    "id": 8,
+                    "title": "Front End Development",
+                    "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
+                    "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
+                },
+                {
+                    "id": 9,
+                    "title": "Front End Development",
+                    "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
+                    "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
+                },
+                {
+                    "id": 10,
+                    "title": "Front End Development",
+                    "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
+                    "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
+                },
+                {
+                    "id": 11,
+                    "title": "Front End Development",
+                    "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
+                    "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
+                },
+                {
+                    "id": 12,
+                    "title": "Front End Development",
+                    "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
+                    "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
+                }
+            ]
         },
         {
-            "title": "Front End Development",
-            "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
-            "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
-        },
-        {
-            "title": "Front End Development",
-            "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
-            "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
-        },
-        {
-            "title": "Front End Development",
-            "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
-            "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
-        },
-        {
-            "title": "Front End Development",
-            "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
-            "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
-        },
-        {
-            "title": "Front End Development",
-            "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
-            "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
-        }
-    ],
-    "ux_bi": [
-        {
-            "title": "Front End Development",
-            "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
-            "desc": "Bootstrap, jQuery, Media Queries, Single-Page Application, Request-Response model, GET and POST requests, connecting to the back-end, AJAX request-response model, JSON as AJAX response format"
-        },
-        {
-            "title": "Front End Development",
-            "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
-            "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
-        },
-        {
-            "title": "Front End Development",
-            "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
-            "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
-        },
-        {
-            "title": "Front End Development",
-            "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
-            "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
-        },
-        {
-            "title": "Front End Development",
-            "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
-            "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
-        },
-        {
-            "title": "Front End Development",
-            "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
-            "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
-        },
-        {
-            "title": "Front End Development",
-            "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
-            "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
-        },
-        {
-            "title": "Front End Development",
-            "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
-            "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
-        }
-    ],
-    "languages": [
-        {
-            "title": "Front End Development",
-            "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
-            "desc": "Bootstrap, jQuery, Media Queries, Single-Page Application, Request-Response model, GET and POST requests, connecting to the back-end, AJAX request-response model, JSON as AJAX response format"
-        },
-        {
-            "title": "Front End Development",
-            "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
-            "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
-        },
-        {
-            "title": "Front End Development",
-            "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
-            "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
-        },
-        {
-            "title": "Front End Development",
-            "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
-            "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
-        },
-        {
-            "title": "Front End Development",
-            "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
-            "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
-        },
-        {
-            "title": "Front End Development",
-            "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
-            "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
-        },
-        {
-            "title": "Front End Development",
-            "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
-            "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
-        },
-        {
-            "title": "Front End Development",
-            "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
-            "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
+            "name": "Languages",
+            "courses": [
+                {
+                    "id": 13,
+                    "title": "Front End Development, 5cr",
+                    "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
+                    "desc": "Bootstrap, jQuery, Media Queries, Single-Page Application, Request-Response model, GET and POST requests, connecting to the back-end, AJAX request-response model, JSON as AJAX response format"
+                },
+                {
+                    "id": 14,
+                    "title": "Front End Development",
+                    "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
+                    "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
+                },
+                {
+                    "id": 15,
+                    "title": "Front End Development",
+                    "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
+                    "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
+                },
+                {
+                    "id": 16,
+                    "title": "Front End Development",
+                    "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
+                    "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
+                },
+                {
+                    "id": 17,
+                    "title": "Front End Development",
+                    "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
+                    "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
+                },
+                {
+                    "id": 18,
+                    "title": "Front End Development",
+                    "link": "http://www.haaga-helia.fi/en/opinto-opas/opintojaksokuvaukset/SWD4TF022",
+                    "desc": "to the back-end, AJAX request-response model, JSON as AJAX response format"
+                }
+            ]
         }
     ]
 }

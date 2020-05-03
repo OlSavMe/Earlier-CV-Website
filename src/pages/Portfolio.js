@@ -2,10 +2,37 @@ import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import '../styles/PortfolioStyles.scss';
 import '../App.scss';
-import All from '../components/Repos';
-import Select from 'react-select'
+import Select from 'react-select';
+import Loader from '../components/Loader';
 
-
+const customStyles = {
+    option: (provided, state) => ({
+        ...provided,
+        borderBottom: '1px #040404',
+        color: state.isSelected ? 'green' : '#040404',
+        padding: 10,
+        backgroundColor: state.isSelected ? "#dfd8c8" : 'white',
+    }),
+    control: (base, state) => ({
+        ...base,
+        background: 'white',
+        // match with the menu
+        borderRadius: state.isFocused ? "3px 3px 0 0" : 3,
+        // Overwrittes the different states of border
+        borderColor: state.isFocused ? "#49494b" : '#040404',
+        // Removes weird border around container
+        boxShadow: state.isFocused ? '#dfd8c8' : '#040404',
+        "&:hover": {
+            // Overwrittes the different states of border
+            borderColor: state.isFocused ? "#49494b" : '#040404'
+        }
+    }),
+    indicatorsContainer: base => ({
+        ...base,
+        // kill the white space on first and last option
+        padding: 3
+    })
+}
 
 
 export default function Portfolio() {
@@ -16,36 +43,46 @@ export default function Portfolio() {
         },
         {
             value: 'JavaScript',
-            label: "JavaScript"
+            label: "JavaScript | ReactJS | React Native"
         },
         {
             value: 'HTML',
-            label: "HTML"
+            label: "HTML | CSS | JQuery | BootStrap"
         },
+        {
+            value: 'All repositories',
+            label: 'All repositories'
+        }
     ];
 
     // set value for default selection
-    const [selectedValue, setSelectedValue] = useState('JavaScript');
+    const [selectedValue, setSelectedValue] = useState('All repositories');
     const [repos, setRepos] = useState([]);
-    // const [filtered, setFiltered] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    const sleep = milliseconds => {
+        return new Promise(resolve => setTimeout(resolve, milliseconds));
+    };
 
     useEffect(() => {
         getXs();
     }, []);
 
-    const getXs = async () => {
-        await Axios.get("https://api.github.com/users/OlSavMe/repos").then(
+    const getXs = async (milliseconds = 1500) => {
+        await sleep(milliseconds)
+        Axios.get("https://api.github.com/users/OlSavMe/repos?per_page=100").then(
             response => {
                 setRepos(response.data);
-                // setFiltered(repos.filter(repo => repo.language === `${selectedValue}`));
-
+                setLoading(false);
             }
         );
     };
 
     const forksout = repos.filter(repo => repo.fork == false);
+    console.log(Object.getOwnPropertyNames(repos));
+    console.log(forksout);
 
-    // console.log(filtered);
+
     console.log(`${selectedValue}`);
     const filtered = forksout.filter(repo => repo.language === `${selectedValue}`);
     console.log(filtered);
@@ -58,32 +95,41 @@ export default function Portfolio() {
     }
 
 
-
-
-
-
     return (
         <div className='portfolio'>
             <div className='container'>
                 <div className='repos'>
-                    <h1>GiHub</h1>
-                    <Select
-                        placeholder="Select Option"
-                        value={data.filter(obj => obj.value === selectedValue)} // set selected value
-                        options={data} // set list of the data
-                        onChange={handleChange} // assign onChange function
-                    />
-
-                    <ul>
-                        {filtered.map((repo) =>
-                            <li key={repo.id}>
-                                <a href={repo.html_url} target="_blank"> {repo.name}</a>
-                                <p>{repo.description}</p>
-                            </li>
-                        )
+                    <h1>My GitHub (OlSavMe)</h1>
+                    <div className='select'><Select
+                        styles={
+                            customStyles
                         }
-                    </ul>
+                        placeholder="Search by type..."
+                        value={data.selectedValue} // set selected value
+                        options={data} // set list of the data
+                        onChange={handleChange}
+                    /></div>
+                    {(selectedValue !== 'All repositories') ?
+                        <ul>
+                            {filtered.map((repo) =>
+                                <li key={repo.id}>
+                                    <a href={repo.html_url} target="_blank"> {repo.name}</a>
+                                    <p>{repo.description}</p>
+                                    {repo.homepage ? <span><a href={repo.homepage} target="_blank">{repo.homepage}</a></span> : null}
+                                </li>
+                            )
+                            }</ul> : <ul>  {forksout.map((repo) =>
+                                <li key={repo.id}>
+                                    <a href={repo.html_url} target="_blank"> {repo.name}</a>
+                                    <p>{repo.description}</p>
+                                    {repo.homepage ? <span><a href={repo.homepage} target="_blank">{repo.homepage}</a></span> : null}
+                                </li>
+                            )
+                            }
+                            {loading && <Loader />}</ul>
+                    }
                 </div >
+                <section className='empty'></section>
             </div >
         </div>
 

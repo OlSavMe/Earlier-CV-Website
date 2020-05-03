@@ -39,7 +39,40 @@
   height: 100vh;
   justify-items: center;
   scroll-behavior: smooth;
-  background-color: lightgrey;
+  background-color:  #dfd8c8;
+
+
+
+@include desktop  {
+  left: 0;
+  right: 0;
+  top: 0;
+  position: fixed;
+}
+
+
+@include big-desktop  {
+  left: 0;
+  right: 0;
+  top: 0;
+  position: fixed;
+}
+
+@include tablet-landscape {
+  left: 0;
+  right: 0;
+  top: 0;
+  position: fixed;
+}
+
+
+@include tablet{
+  left: 0;
+  right: 0;
+  top: 0;
+  position: fixed;
+}
+
 
   video {
     object-fit: cover;
@@ -54,29 +87,38 @@
   }
 
 .container {
-width: 80%;
+width: 100%;
 display: flex;
 flex-direction: column;
 flex-wrap: nowrap;
 text-align: center;
 align-items: center;
 color: black;
-position: relative;
+position: fixed;
 overflow: scroll;
-margin: auto;
-padding: 4%;
+margin: 10vh auto;
+left: 0;
+right: 0;
+padding: 2% 20%;
 height: 100vh;
-background-color: lightgrey;
-// box-shadow: -15px 0 15px -15px inset rgba(0,0,0,0.3);
-// box-shadow: 12px 0 15px -4px rgba(0,0,0,0.3), -12px 0 8px -4px rgba(0,0,0,0.3);
+background-color: #dfd8c8;
 
->h3 {
-  color: green;
+
+>h1, h2 {
+  color: #040404;
 }
   
 @include phone {
-  width: 100%;}
+  position: relative;
+  width: 100%;
   margin: auto;
+  padding: 4% 0;
+}
+
+.empty {
+  height: 3000px;
+}
+
 }
 
 

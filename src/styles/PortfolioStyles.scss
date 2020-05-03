@@ -39,73 +39,64 @@
     height: 100vh;
     justify-items: center;
     scroll-behavior: smooth;
-    background-color: grey;
+  
  
 
 .container {
-  width: 70%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content:  flex-start;
-  position: relative;
+  position: fixed;
+  left: 0;
+  right: 0;
   overflow: scroll;
   scroll-behavior: smooth;
-  margin: auto;
-  padding:  0 0 50% 10%;
+  margin: 9vh auto;
+  padding:  3% 15%;
   height: 100vh;
-  background-color: grey;
+  background-color:  #49494b;
 
     
   @include phone {
+    position: relative;
     width: 100%;
     margin: auto;
-   padding-right: 1.5rem;
-    // overflow-x: hidden;
+    padding:  3% 0;
     
   }
 
-
-    @include big-desktop{
-      width: 60%;
-
-    }
-
-      @include tablet {
-        width: 90%;
-       }
-
-       @include tablet-landscape {
-        width: 90%;
-       }
 
 .repos {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start; 
-
-.btn-group {
-width: 50%;
-button {
-    border: 1px solid palegreen;
-    background-color: white;
-    color: black; 
-    width:25%;
-  /* Green border */
-  /* White text */
-  padding: 10px 24px; /* Some padding */
-  cursor: pointer; /* Pointer/hand icon */
-  float: left; /* Float the buttons side by side */
-  &:hover {
-    background-color: transparent;
-    color: white;
-  }
-}}
+    padding: 0 10%;
 
 
+    @include phone {
+      max-width: 360px;
+     
+      
+    }
 
-    >h1 {
+    .select {
+      width: 35vw;
+
+      @include phone {
+        width: 80%;
+        min-width: 300px;
+        padding: 0 1%;
+        
+      }
+    }
+
+
+
+
+    >h1, p {
 color: white;
     }
     >ul {
@@ -114,26 +105,43 @@ color: white;
         >li {
             list-style: none;
             font-size: 2rem;
-            padding-bottom: 1rem;
+            padding-top: 2rem;
             @include phone {
                 font-size: 1.4rem;
             }
             >a {
                 color: white;
-                text-decoration: none;
                 padding: 0;
                 &:hover {
                     opacity: 0.5;
                   }
-
+                }
+            >span{
+              >a{
+              font-size:  1.8rem;
+              color: #dfd8c8;  
+              text-decoration: none;
+              @include phone {
+                font-size: 1.2rem;
             }
+              &:hover {
+                color: navy; 
+              }
+              }
+            }
+
             >p {
                 font-size: 1.2rem;
-                color: palegreen; 
+                color: #dfd8c8;; 
                 margin: 0;
             }
         }
  
     }
 }
-}}
+
+.empty {
+  height: 3000px;
+}
+}
+}

@@ -1,0 +1,25 @@
+@mixin phone {
+    @media only screen and (max-width: 768px) {
+      @content;
+    }
+}
+
+
+.loader {
+    margin: auto;
+    width: 50%;
+    max-width: 400px;
+    min-width: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    color: white; 
+    // transform: rotate(360deg);
+    // animation: spinner 1s linear infinite;
+
+    @include phone {
+        font-size: 40px;
+      }
+  }
