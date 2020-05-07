@@ -1,13 +1,12 @@
-import React from 'react';
-import './Loader.scss';
+import React from "react";
+import ".././styles/LoaderStyles.scss";
 
 function Loader() {
-    return (
-        <div className="loader">
-            <i className="fa fa-ring fa-spin"></i>
-
-        </div>
-    );
+  return (
+    <div className="loader">
+      <i className="fa fa-ring fa-spin"></i>
+    </div>
+  );
 }
 
 export default Loader;

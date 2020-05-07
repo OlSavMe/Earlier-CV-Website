@@ -1,10 +1,8 @@
-// Background colors
-export const backgroundColorDark = '#2A2E43';
-export const backgroundColorLight = '#FFFFFF';
+export const backgroundColorDark = "#2A2E43";
+export const backgroundColorLight = "#FFFFFF";
+export const backgroundColorBlue = "#5773FF";
 
-// Nappulat, korostusväri seikkailun karttasivulla #5773FF
-export const colorBlue = '#5773FF';
+export const colorBlue = "#5773FF";
+export const colorDarkBlue = "#001B8E";
 
-/* Tekstiboxien tausta,Nappuloiden teksti,Tummien taustojen teksti,
-Navbar ikonit,Seikkailulistan korostus,Opacity #FFFFFF */
-export const colorWhite = '#FFFFFF';
+export const colorWhite = "#FFFFFF";

@@ -1,7 +1,7 @@
 import React from "react";
 import { Portfolio, Education, Front, Career } from "./pages/index";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import BottomNav from './components/BottomNavigation';
+import BottomNav from "./components/BottomNavigation";
 
 function App() {
   return (
@@ -14,8 +14,6 @@ function App() {
             <Route path="/portfolio" component={Portfolio} />
             <Route path="/edu" component={Education} />
             <Route path="/career" component={Career} />
-
-
           </div>
         </>
       </Switch>
@@ -24,4 +22,3 @@ function App() {
 }
 
 export default App;
-

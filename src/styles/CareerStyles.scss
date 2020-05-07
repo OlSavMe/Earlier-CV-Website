@@ -30,14 +30,14 @@
 
 ::-webkit-scrollbar {
   width: 0px;
-  background: transparent;
+  background: transparent; /* make scrollbar transparent */
 }
 
-.edu {
+.career {
   height: 100vh;
   justify-items: center;
   scroll-behavior: smooth;
-  background-color: #dfd8c8;
+  // background-color: white;
 
   @include desktop {
     left: 0;
@@ -80,24 +80,84 @@
     margin: 10vh auto;
     left: 0;
     right: 0;
-    padding: 2% 10%;
+    padding: 2% 0;
     height: 100vh;
-    background-color: #dfd8c8;
+    // background-color: white;
 
     > h1,
-    h2 {
+    h2,
+    h3 {
+      font-size: 1.5rem;
       color: #040404;
+      @include phone {
+        font-size: 1.5rem;
+      }
     }
 
     @include phone {
       position: relative;
       width: 100%;
       margin: auto;
-      padding: 4% 1%;
+      padding: 4% 0;
     }
 
-    .empty {
-      height: 3000px;
+    > section {
+      width: 100%;
+      display: flex;
+      padding: 2% 15%;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      font-size: 1.5rem;
+      text-align: justify;
+
+      @include phone {
+        font-size: 1rem;
+        padding: 2%;
+      }
+
+      // > span {
+      //   font-size: 1.5rem;
+      // }
+
+      > p,
+      h3,
+      h4 {
+        margin: 0.5rem 0;
+        text-align: left;
+        text-align: justify;
+
+        > a {
+          color: black;
+          opacity: 0.6;
+          &:hover {
+            color: navy;
+            opacity: 1;
+          }
+        }
+      }
+      > h2 {
+        margin: 0.5rem 0;
+        margin-bottom: 0.7rem;
+      }
     }
+
+    > section:first-of-type {
+      padding: 2% 15%;
+      text-align: justify;
+
+      @include phone {
+        padding: 4%;
+        text-align: center;
+      }
+    }
+
+    > section:nth-child(odd) {
+      background: #aba9bb;
+    }
+
+    // > section:nth-child(even) {
+    //   background: #fff8ec;
+    // }
   }
 }
