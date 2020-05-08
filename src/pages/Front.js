@@ -78,6 +78,7 @@ export default function Front() {
             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
             officia deserunt mollit anim id est laborum.
           </p>
+          <p>roll upwards</p>
         </section>
         <section className="empty"></section>
       </div>

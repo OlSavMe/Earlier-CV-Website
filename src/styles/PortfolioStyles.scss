@@ -85,6 +85,13 @@
       > h1,
       p {
         color: white;
+
+        > a {
+          color: white;
+          &:hover {
+            opacity: 0.6;
+          }
+        }
       }
       > ul {
         padding: 0;
@@ -124,10 +131,6 @@
           }
         }
       }
-    }
-
-    .empty {
-      height: 3000px;
     }
   }
 }

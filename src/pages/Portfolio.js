@@ -3,7 +3,10 @@ import Axios from "axios";
 import "../styles/PortfolioStyles.scss";
 import "../App.scss";
 import Select from "react-select";
-import Loader from "../components/Loader";
+import AllRepos from ".././components/AllRepos";
+import ByLangRepos from ".././components/ByLangRepos";
+import SortedUpdateRepos from ".././components/SortedUpdateRepos";
+import DeployedRepos from ".././components/DeployedRepos";
 
 const customStyles = {
   option: (provided, state) => ({
@@ -11,10 +14,12 @@ const customStyles = {
     borderBottom: "1px #040404",
     color: state.isSelected ? "green" : "#040404",
     padding: 10,
+    fontSize: "1.2rem",
     backgroundColor: state.isSelected ? "#dfd8c8" : "white",
   }),
   control: (base, state) => ({
     ...base,
+    fontSize: "1.2rem",
     background: "white",
     borderRadius: state.isFocused ? "3px 3px 0 0" : 3,
     borderColor: state.isFocused ? "#49494b" : "#040404",
@@ -31,6 +36,14 @@ const customStyles = {
 
 export default function Portfolio() {
   const data = [
+    {
+      value: "By latest update",
+      label: "By latest update",
+    },
+    {
+      value: "Only deployed",
+      label: "Only deployed",
+    },
     {
       value: "Java",
       label: "Java",
@@ -50,36 +63,6 @@ export default function Portfolio() {
   ];
 
   const [selectedValue, setSelectedValue] = useState("All repositories");
-  const [repos, setRepos] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  const sleep = (milliseconds) => {
-    return new Promise((resolve) => setTimeout(resolve, milliseconds));
-  };
-
-  useEffect(() => {
-    getXs();
-  }, []); // eslint-disable-line
-
-  const getXs = async (milliseconds = 500) => {
-    await sleep(milliseconds);
-    Axios.get("https://api.github.com/users/OlSavMe/repos?per_page=100").then(
-      (response) => {
-        setRepos(response.data);
-        setLoading(false);
-      }
-    );
-  };
-
-  const forksout = repos.filter((repo) => repo.fork === false);
-  console.log(Object.getOwnPropertyNames(repos));
-  console.log(forksout);
-
-  console.log(`${selectedValue}`);
-  const filtered = forksout.filter(
-    (repo) => repo.language === `${selectedValue}`
-  );
-  console.log(filtered);
 
   // handle onChange event of the dropdown
   const handleChange = (e) => {
@@ -90,7 +73,17 @@ export default function Portfolio() {
     <div className="portfolio">
       <div className="container">
         <div className="repos">
-          <h1>My GitHub (OlSavMe)</h1>
+          <h1>
+            My GitHub (
+            <a
+              href="https://github.com/OlSavMe"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              OlSavMe
+            </a>
+            )
+          </h1>
           <div className="select">
             <Select
               styles={customStyles}
@@ -100,65 +93,23 @@ export default function Portfolio() {
               onChange={handleChange}
             />
           </div>
-          {selectedValue !== "All repositories" ? (
-            <ul>
-              {filtered.map((repo) => (
-                <li key={repo.id}>
-                  <a
-                    href={repo.html_url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {" "}
-                    {repo.name}
-                  </a>
-                  <p>{repo.description}</p>
-                  {repo.homepage ? (
-                    <span>
-                      <a
-                        href={repo.homepage}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {repo.homepage}
-                      </a>
-                    </span>
-                  ) : null}
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <ul>
-              {" "}
-              {forksout.map((repo) => (
-                <li key={repo.id}>
-                  <a
-                    href={repo.html_url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {" "}
-                    {repo.name}
-                  </a>
-                  <p>{repo.description}</p>
-                  {repo.homepage ? (
-                    <span>
-                      <a
-                        href={repo.homepage}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {repo.homepage}
-                      </a>
-                    </span>
-                  ) : null}
-                </li>
-              ))}
-              {loading && <Loader />}
-            </ul>
-          )}
+          {(() => {
+            switch (selectedValue) {
+              case "By latest update":
+                return <SortedUpdateRepos />;
+              case "All repositories":
+                return <AllRepos />;
+              case "Java":
+                return <ByLangRepos selectedValue={selectedValue} />;
+              case "JavaScript":
+                return <ByLangRepos selectedValue={selectedValue} />;
+              case "HTML":
+                return <ByLangRepos selectedValue={selectedValue} />;
+              case "Only deployed":
+                return <DeployedRepos />;
+            }
+          })()}
         </div>
-        <section className="empty"></section>
       </div>
     </div>
   );
