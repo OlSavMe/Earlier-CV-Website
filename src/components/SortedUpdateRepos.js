@@ -51,7 +51,7 @@ export default function SortedUpdateRepos() {
         ))}
         {loading && <Loader />}
       </ul>
-      <section style={{ minHeight: "600px" }}></section>
+      <section style={{ minHeight: "500px" }}></section>
     </>
   );
 }

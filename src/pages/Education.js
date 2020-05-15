@@ -18,6 +18,11 @@ const useStyles = makeStyles((theme) => ({
     fontSize: theme.typography.pxToRem(20),
     flexShrink: "50%",
     fontFamily: "Belleza",
+    textDecoration: "none",
+    transition: "all 600ms",
+    "&:hover": {
+      fontSize: theme.typography.pxToRem(23),
+    },
   },
   secondaryHeading: {
     fontSize: theme.typography.pxToRem(18),

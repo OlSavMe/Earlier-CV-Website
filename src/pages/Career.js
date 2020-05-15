@@ -15,15 +15,14 @@ export default function Career() {
         </h3>
         <section>
           <span>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua.
+            During 2019 - 2020 I worked in several team projects as a
+            React/JavaScript developer; I also did digital prototyping for 2
+            week-long sprints.
+          </span>
+          <span>
+            In my pre-IT career I was an English technical translator for 8
+            years. I have 2-year experience in SEO copywriting and digital
+            marketing.
           </span>
         </section>
         <section>
@@ -66,7 +65,7 @@ export default function Career() {
             UX DESIGNER
           </h3>
           <h3 style={{ color: colorDarkBlue }}>
-            <strong>The Shortcut Digital Prototyping Week</strong>
+            <strong>DIGITAL PROTOTYPING WEEK by The Shortcut</strong>
           </h3>
           <h4>Oct 2019</h4>
           <p>

@@ -74,15 +74,14 @@ export default function Portfolio() {
       <div className="container">
         <div className="repos">
           <h1>
-            My GitHub (
+            My GitHub Repos
             <a
               href="https://github.com/OlSavMe"
               target="_blank"
               rel="noopener noreferrer"
             >
-              OlSavMe
+              <span>OlSavMe</span>
             </a>
-            )
           </h1>
           <div className="select">
             <Select

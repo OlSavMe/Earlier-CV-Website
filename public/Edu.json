@@ -44,13 +44,13 @@
         {
           "id": 23,
           "title": "Software Development Technologies, 5cr",
-          "link": "pinto-opas.haaga-helia.fi/en/realization/SWD4TF023-3004",
+          "link": "https://opinto-opas.haaga-helia.fi/en/realization/SWD4TF023-3004",
           "desc": "Scrum, NodeJS, ReactJS, Redux and Redux Dev Tools, PostMan, Axios, MariaDB, Git"
         },
         {
           "id": 26,
           "title": "Software Project, 10cr",
-          "link": "pinto-opas.haaga-helia.fi/en/realization/SWD4TF023-3004",
+          "link": "https://opinto-opas.haaga-helia.fi/en/realization/SWD4TF023-3004",
           "desc": "Creating sample client-oriented software product with Scrum methods, back- and front-end design. Technologies used: NodeJS, Express, ReactJS, Redux and Redux Dev Tools, PostMan, AJAX with Axios, MariaDB, Git"
         },
         {
@@ -71,6 +71,18 @@
           "title": "Android App Development, 5cr",
           "link": "https://opinto-opas.haaga-helia.fi/course_unit/PRO4TF024",
           "desc": "Introduction to app creation and Android App Studio, Creation of new Android project, Setting up Android App Studio interface environment, Basic use of Android App Studio, Testing with the Android emulator, Enabling support for different screen sizes and pixel densities for Android model and devices, Publishing the app on the Google Play store"
+        },
+        {
+          "id": 24,
+          "title": "C - Programming, 3 cr (Metropolia UAS)",
+          "link": "https://opinto-opas.metropolia.fi/en/tarjontakorit/en/52976",
+          "desc": "Elements of a program (C): variables, constants, types, expressions, arrays, control structures, input and output, sub programs and parameters."
+        },
+        {
+          "id": 25,
+          "title": "C++ Programming, 3 cr (Metropolia UAS)",
+          "link": "https://opinto-opas.metropolia.fi/en/tarjontakorit/en/52976",
+          "desc": "automatic and dynamic creation of an object, constructors and destructors, inheritance, associations, aggregation, function overloading, virtual functions and dynamic binding, various parameter types, copy constructor, operator overloading, generic classes and functions, standard class library"
         }
       ]
     },

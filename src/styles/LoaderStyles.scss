@@ -15,6 +15,10 @@
   transform: translate(-50%, -50%);
   font-size: 60px;
   color: white;
+
+  > p {
+    font-size: 2rem;
+  }
   // transform: rotate(360deg);
   // animation: spinner 1s linear infinite;
 

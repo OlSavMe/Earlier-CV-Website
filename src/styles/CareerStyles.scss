@@ -77,16 +77,18 @@
     color: black;
     position: fixed;
     overflow: scroll;
-    margin: 10vh auto;
+    margin: 13vh auto;
     left: 0;
     right: 0;
-    padding: 2% 0;
+    padding: 6% 0;
     height: 100vh;
     // background-color: white;
 
     > h1,
     h2,
     h3 {
+      margin: 0;
+
       font-size: 1.5rem;
       color: #040404;
       @include phone {
@@ -109,7 +111,7 @@
       justify-content: center;
       align-items: center;
       font-size: 1.5rem;
-      text-align: justify;
+      text-align: center;
 
       @include phone {
         font-size: 1rem;
@@ -124,8 +126,6 @@
       h3,
       h4 {
         margin: 0.5rem 0;
-        text-align: left;
-        text-align: justify;
 
         > a {
           color: black;
@@ -144,11 +144,14 @@
 
     > section:first-of-type {
       padding: 2% 15%;
-      text-align: justify;
+      text-align: center;
 
       @include phone {
         padding: 4%;
         text-align: center;
+      }
+      > span {
+        padding: 2%;
       }
     }
 
