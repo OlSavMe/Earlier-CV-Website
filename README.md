@@ -8,4 +8,5 @@ My CV website [deployed here](https://github.com/facebook/create-react-app).
 - JSON
 - React Material-UI
 - react-select
+- SCSS
 
