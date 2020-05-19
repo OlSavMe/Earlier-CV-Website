@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import Loader from "./Loader";
+import RepoNo from "./RepoNo";
+import { sortedRepos } from "../Constants";
 
 export default function SortedUpdateRepos() {
   const [sorted, setSorted] = useState([]);
@@ -11,24 +13,24 @@ export default function SortedUpdateRepos() {
   };
 
   useEffect(() => {
-    getSorted();
+    getSorted(); // eslint-disable-next-line
   }, []);
 
-  const getSorted = async (milliseconds = 500) => {
+  const getSorted = async (milliseconds = 200) => {
     await sleep(milliseconds);
-    Axios.get(
-      "https://api.github.com/users/OlSavMe/repos?sort=updated&direction=desc&per_page=100"
-    ).then((response) => {
+    Axios.get(`${sortedRepos}`).then((response) => {
       setSorted(response.data);
       setLoading(false);
     });
   };
 
-  const nofork = sorted.filter((repo) => repo.fork == false);
+  const nofork = sorted.filter((repo) => repo.fork === false);
+  const length = nofork.length;
 
   return (
     <>
       <ul>
+        <RepoNo length={length} />
         {nofork.map((repo) => (
           <li key={repo.id}>
             <a href={repo.html_url} target="_blank" rel="noopener noreferrer">

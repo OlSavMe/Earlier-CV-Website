@@ -92,8 +92,16 @@
         }
 
         > a {
-          padding-left: 0.5rem;
+          margin-left: 1rem;
           color: white;
+          text-decoration: underline;
+          transition: all 500ms;
+          &:hover {
+            text-decoration: none;
+          }
+          &:hover:after {
+            content: "  >>>";
+          }
         }
       }
 
@@ -120,7 +128,12 @@
           > a {
             color: white;
             padding: 0;
-            transition: all 500ms;
+            &:hover {
+              text-decoration: none;
+            }
+            &:hover:after {
+              content: "  >>>";
+            }
           }
           > span {
             > a {
@@ -138,7 +151,7 @@
           }
 
           > p {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             color: #dfd8c8;
             margin: 0;
           }

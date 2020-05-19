@@ -77,16 +77,43 @@
     color: black;
     position: fixed;
     overflow: scroll;
-    margin: 10vh auto;
+    margin: 11vh auto;
     left: 0;
     right: 0;
     padding: 2% 10%;
     height: 100vh;
     background-color: #dfd8c8;
 
-    > h1,
+    h1,
     h2 {
       color: #040404;
+      margin: 0.7rem;
+      @include phone {
+        font-size: 1.5rem;
+      }
+    }
+
+    .uni {
+      margin-bottom: 2rem;
+      h2 {
+        background: white;
+        padding: 0.6rem;
+        border-radius: 10px;
+      }
+      h2:nth-child(odd) {
+        border-radius: 5px 30px 5px;
+      }
+      h2:nth-child(even) {
+        border-radius: 5px 30px 5px;
+      }
+    }
+
+    .courses {
+      align-items: center;
+      > h2:first-of-type {
+        text-decoration: underline;
+        margin-bottom: 1rem;
+      }
     }
 
     @include phone {
@@ -97,7 +124,7 @@
     }
 
     .empty {
-      height: 3000px;
+      min-height: 300px;
     }
   }
 }

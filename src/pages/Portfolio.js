@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import Axios from "axios";
+import React, { useState } from "react";
 import "../styles/PortfolioStyles.scss";
 import "../App.scss";
 import Select from "react-select";
@@ -93,6 +92,7 @@ export default function Portfolio() {
             />
           </div>
           {(() => {
+            // eslint-disable-next-line
             switch (selectedValue) {
               case "By latest update":
                 return <SortedUpdateRepos />;

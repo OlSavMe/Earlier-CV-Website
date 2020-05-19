@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import Loader from "./Loader";
+import RepoNo from "./RepoNo";
+import { allRepos } from "../Constants";
 
 export default function DeployedRepos() {
   const [repos, setRepos] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    getAllRepos();
+    getAllRepos(); // eslint-disable-next-line
   }, []);
 
   const sleep = (milliseconds) => {
@@ -16,22 +18,22 @@ export default function DeployedRepos() {
 
   const getAllRepos = async (milliseconds = 200) => {
     await sleep(milliseconds);
-    Axios.get("https://api.github.com/users/OlSavMe/repos?per_page=100").then(
-      (response) => {
-        setRepos(response.data);
-        setLoading(false);
-      }
-    );
+    Axios.get(`${allRepos}`).then((response) => {
+      setRepos(response.data);
+      setLoading(false);
+    });
   };
 
-  const nofork = repos.filter((repo) => repo.fork == false);
+  const nofork = repos.filter((repo) => repo.fork === false);
   const filtered = nofork.filter(
     (repo) => repo.homepage !== null && repo.homepage !== ""
   );
+  const length = filtered.length;
 
   return (
     <>
       <ul>
+        <RepoNo length={length} />
         {filtered.map((repo) => (
           <li key={repo.id}>
             <a href={repo.html_url} target="_blank" rel="noopener noreferrer">

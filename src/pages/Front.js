@@ -63,22 +63,23 @@ export default function Front() {
         </div>
         <section className="hash">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in
-            voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum.
+            Hi! I am a web developer with hands-on experience in JavaScript and
+            ReactJS frontend development in team projects.{" "}
+            <a
+              href="https://github.com/OlSavMe/Current-CV-Website"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              This website
+            </a>{" "}
+            is my pet project. I've gained basic knowledge of Node.js, Java,
+            C/C++, SQL, Azure DevOps through my university studies. In 2020, I
+            am graduating as a software developer from Haaga-Helia UAS,
+            Helsinki. In my pre-IT career I worked as an English technical
+            translator. Find the details in the Portfolio, Career and Education
+            sections of this site.
           </p>
-          <p>roll upwards</p>
+          <p>...or scroll down to watch the ducks.</p>
         </section>
         <section className="empty"></section>
       </div>

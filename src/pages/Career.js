@@ -3,7 +3,6 @@ import "../styles/CareerStyles.scss";
 import "../App.scss";
 import { colorWhite } from "../styles/centralStyles";
 import { backgroundColorDark } from "../styles/centralStyles";
-import { backgroundColorBlue } from "../styles/centralStyles";
 import { colorDarkBlue } from "../styles/centralStyles";
 
 export default function Career() {
@@ -20,9 +19,8 @@ export default function Career() {
             week-long sprints.
           </span>
           <span>
-            In my pre-IT career I was an English technical translator for 8
-            years. I have 2-year experience in SEO copywriting and digital
-            marketing.
+            In my pre-IT career I was an English technical translator for 7
+            years. I have experience in SEO copywriting and digital marketing.
           </span>
         </section>
         <section>
@@ -32,30 +30,51 @@ export default function Career() {
             FRONTEND DEVELOPER
           </h3>
           <h3 style={{ color: colorWhite }}>
-            <strong>The Shortcut</strong>
+            <strong>The Shortcut, Helsinki</strong>
           </h3>
-          <h4>Jan 2020 - present</h4>
+          <h4>Jan 2020 - ongoing</h4>
           <p>
-            Developing user interface of the company's website:{" "}
+            Developing responsive user interface of the company's website with{" "}
             <strong>
-              ReactJS and libraries, SCSS, WordPress API, Eventbrite API
+              ReactJS and other JS libraries, SASS/SCSS, fetching data from
+              WordPress and Eventbrite REST APIs through Axios client
             </strong>
-            . Teamwork with the other web developer and designers.{" "}
-            <a href="#">link to project</a>
+            . Collaboration through <strong>git </strong> version control.
+            Teamwork with designers and markerters using Agile approach and
+            Trello boards. Deployment of MVPs on Firebase platform.
+            <a
+              href="https://github.com/OlSavMe/React-Shortcut-Website"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {" "}
+              >>project
+            </a>
           </p>
           <p>
-            Creating JSON data and visual charts for the Data Management System:
-            <strong> ReactJS, react-chartjs-2, Docker Containers</strong>.
+            Creating JSON data and visual charts for the interface of the
+            Database Management System with
+            <strong> ReactJS, react-chartjs-2</strong>, using{" "}
+            <strong> Docker Containers</strong> for local dev environment .
             Teamwork with the backend developer and data analysts.
           </p>
           <h3 style={{ color: colorWhite }}>
-            <strong>Haaga-Helia & Webscale Oy</strong>
+            <strong>Haaga-Helia & Webscale Oy, Helsinki</strong>
           </h3>
           <h4>Aug 2019 - Dec 2019</h4>
           <p>
-            Developing user interface of a game web app:
-            <strong> ReactJS, React Material-UI</strong>. Team work with front-
-            and backend developers, designers.
+            Developing user interface of a game web app with
+            <strong>
+              {" "}
+              ReactJS, React Material-UI, qr scanner library, react-router,
+              Axios client
+            </strong>
+            , using Docker Containers with pgAdmin for local dev environment.
+            Team work with front- and backend developers, designers in{" "}
+            <strong>
+              Scrum sprints, using git version control and CircleCI
+            </strong>{" "}
+            for continuos delivery and automated testing.
           </p>
         </section>
         <section>
@@ -65,26 +84,76 @@ export default function Career() {
             UX DESIGNER
           </h3>
           <h3 style={{ color: colorDarkBlue }}>
-            <strong>DIGITAL PROTOTYPING WEEK by The Shortcut</strong>
+            <strong>DIGITAL PROTOTYPING WEEK by The Shortcut, Helsinki</strong>
           </h3>
           <h4>Oct 2019</h4>
           <p>
-            Developing design and prototype of a volunteer matching mobile app{" "}
-            <strong>Figma</strong>. Teamwork with the other UX designer.{" "}
-            <a href="#">link to project</a>
+            Developing design and prototype of a volunteer matching mobile app
+            with <strong>Figma</strong>. Teamwork with the other UX designer.{" "}
+            <a
+              href="https://www.figma.com/proto/P9IeRig2R8qgdylrxklhUC/Prototyping-UI-Kit-(Copy)?node-id=311%3A263&scaling=scale-down"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {" "}
+              >>project
+            </a>
           </p>
           <h3 style={{ color: colorDarkBlue }}>
-            <strong>The winner project of the RIGA MUDDIE WEEK</strong>
+            <strong>The winner project of the RIGA MUDDIE WEEK, Riga</strong>
           </h3>
           <h4>Apr 2019</h4>
           <p>
-            Developing design and prototype for a healthcare application:{" "}
-            <strong>Figma</strong>. Team work with the other UX designer.{" "}
-            <a href="#">link to project</a>
+            Developing design and prototype for a healthcare application with{" "}
+            <strong>Figma</strong> in a multidisciplinary team.{" "}
+            <a
+              href="https://www.figma.com/proto/MXr37r7aAN7txw7QVJFY03/READY-migraine-map-vol2-(Copy)?node-id=29%3A6&scaling=scale-down"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {" "}
+              >>project
+            </a>
           </p>
         </section>
-        <section></section>
-        <section></section>
+        <section>
+          <h3
+            style={{ color: colorWhite, backgroundColor: backgroundColorDark }}
+          >
+            ENGLISH TECHNICAL TRANSLATOR
+          </h3>
+          <h3 style={{ color: colorWhite }}>
+            <strong>
+              Astaldi Ictas, Josef Gartner, Paroc, Lemminkäinen, Globus
+              translation agency, freelance
+            </strong>
+          </h3>
+          <h3 style={{ color: colorWhite }}>
+            <strong>Tver - Saint-Petersburg, Russia</strong>
+          </h3>
+          <h4>2010 - 2016</h4>
+          <p>
+            Translation, interpreting, writing, proofreading in construction and
+            manufacturing industries.
+          </p>
+        </section>
+        <section>
+          <h3
+            style={{ color: colorWhite, backgroundColor: backgroundColorDark }}
+          >
+            SEO COPYWRITER
+          </h3>
+          <h3 style={{ color: colorDarkBlue }}>
+            <strong>Online-marketing agencies</strong>
+          </h3>
+          <h4>2011 - 2012</h4>
+          <p>
+            Advertising, web-content creation, SEO copywriting, translation,
+            editing, negotiations with clients, moderation of an online shoe
+            store community in a social network
+          </p>
+        </section>
+        <section className="empty"></section>
       </div>
     </div>
   );
