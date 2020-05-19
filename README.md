@@ -1,4 +1,4 @@
-My CV website [deployed here](https://github.com/facebook/create-react-app).
+My CV website [deployed here](https://o-savka.firebaseapp.com/).
 
 ## Tools
 
