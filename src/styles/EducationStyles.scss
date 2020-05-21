@@ -1,92 +1,43 @@
-@mixin phone {
-  @media only screen and (max-width: 768px) {
-    @content;
-  }
-}
+@import "./indexStyles";
 
-@mixin tablet {
-  @media only screen and (min-width: 769px) and (max-width: 1023px) {
-    @content;
-  }
-}
-
-@mixin tablet-landscape {
-  @media only screen and (min-width: 1024px) and (max-width: 1299px) {
-    @content;
-  }
-}
-
-@mixin desktop {
-  @media only screen and (min-width: 1300px) and (max-width: 1799px) {
-    @content;
-  }
-}
-
-@mixin big-desktop {
-  @media only screen and (min-width: 1800px) {
-    @content;
-  }
-}
-
-::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
-}
+@include scrollbars;
 
 .edu {
-  height: 100vh;
+  @include max-height-vh;
   justify-items: center;
   scroll-behavior: smooth;
-  background-color: #dfd8c8;
+  background-color: $wheat;
+  position: fixed;
+  @include zero-margin;
 
-  @include desktop {
-    left: 0;
-    right: 0;
-    top: 0;
-    position: fixed;
-  }
-
-  @include big-desktop {
-    left: 0;
-    right: 0;
-    top: 0;
-    position: fixed;
-  }
-
-  @include tablet-landscape {
-    left: 0;
-    right: 0;
-    top: 0;
-    position: fixed;
-  }
-
-  @include tablet {
-    left: 0;
-    right: 0;
-    top: 0;
-    position: fixed;
+  @include phone {
+    position: static;
   }
 
   .container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
+    @include max-width;
+    @include max-height-vh;
+    @include flex-col-nowrap;
     text-align: center;
     align-items: center;
-    color: black;
     position: fixed;
     overflow: scroll;
     margin: 11vh auto;
     left: 0;
     right: 0;
     padding: 2% 10%;
-    height: 100vh;
-    background-color: #dfd8c8;
+    background-color: $wheat;
+
+    @include phone {
+      position: relative;
+      @include max-width;
+      margin: auto;
+      padding: 4% 1%;
+    }
 
     h1,
     h2 {
-      color: #040404;
+      color: $very-dark-gray;
       margin: 0.7rem;
       @include phone {
         font-size: 1.5rem;
@@ -98,7 +49,6 @@
       h2 {
         background: white;
         padding: 0.6rem;
-        border-radius: 10px;
       }
       h2:nth-child(odd) {
         border-radius: 5px 30px 5px;
@@ -114,13 +64,6 @@
         text-decoration: underline;
         margin-bottom: 1rem;
       }
-    }
-
-    @include phone {
-      position: relative;
-      width: 100%;
-      margin: auto;
-      padding: 4% 1%;
     }
 
     .empty {

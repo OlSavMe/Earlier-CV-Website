@@ -1,37 +1,6 @@
-@mixin phone {
-  @media only screen and (max-width: 768px) {
-    @content;
-  }
-}
+@import "./indexStyles";
 
-@mixin tablet {
-  @media only screen and (min-width: 769px) and (max-width: 1023px) {
-    @content;
-  }
-}
-
-@mixin tablet-landscape {
-  @media only screen and (min-width: 1024px) and (max-width: 1299px) {
-    @content;
-  }
-}
-
-@mixin desktop {
-  @media only screen and (min-width: 1300px) and (max-width: 1799px) {
-    @content;
-  }
-}
-
-@mixin big-desktop {
-  @media only screen and (min-width: 1800px) {
-    @content;
-  }
-}
-
-::-webkit-scrollbar {
-  width: 0px;
-  background: transparent; /* make scrollbar transparent */
-}
+@include scrollbars;
 
 .front {
   height: 100%;
@@ -42,7 +11,7 @@
   video {
     object-fit: cover;
     width: 100vw;
-    height: 100vh;
+    @include max-height-vh;
     position: fixed;
     top: 0;
     left: 0;
@@ -53,9 +22,7 @@
   .container {
     width: 80%;
     flex: 1;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    @include flex-row-wrap;
     color: white;
     position: fixed;
     margin: 10vh auto;
@@ -69,7 +36,7 @@
 
     @include phone {
       position: relative;
-      width: 100%;
+      @include max-width;
       margin: auto;
     }
 
@@ -86,9 +53,7 @@
     }
 
     .profile {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
+      @include flex-col-wrap;
       margin-right: 0;
 
       @include phone {
@@ -115,9 +80,13 @@
         display: flex;
         flex-direction: column;
         padding: 1rem 0;
-        // color: RGB (249,240,212);
 
-        > h2 {
+        @include phone {
+          @include max-width;
+          padding: 2rem 0;
+        }
+
+        h2 {
           list-style-type: none;
           margin: 0;
           font-weight: normal;
@@ -129,14 +98,14 @@
           }
 
           @include phone {
-            width: 100%;
+            @include max-width;
             font-weight: bold;
             font-size: 1.5rem;
             padding: 0.5rem 0;
           }
         }
 
-        > h3 {
+        h3 {
           list-style-type: none;
           margin: 0;
           font-weight: normal;
@@ -147,7 +116,7 @@
           }
 
           @include phone {
-            width: 100%;
+            @include max-width;
             font-weight: bold;
             font-size: 1.5rem;
             padding: 0.5rem 0;
@@ -164,23 +133,20 @@
             }
           }
         }
-
-        @include phone {
-          width: 100%;
-          padding: 2rem 0;
-        }
       }
 
       footer {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: 100%;
+        @include flex-row-wrap;
+        @include max-width;
         justify-content: flex-start;
         padding: 2rem 0;
         margin-top: 0.1rem;
 
-        > a img {
+        @include phone {
+          padding: 1rem 0;
+        }
+
+        a img {
           height: 60px;
           border-radius: 50%;
           padding-right: 1.5rem;
@@ -193,36 +159,30 @@
             height: 50px;
           }
         }
-        @include phone {
-          width: 100%;
-          padding: 1rem 0;
-        }
       }
     }
 
     .hash {
       flex: 2;
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
+      @include flex-col-wrap;
       padding: 0 0 0 6%;
       text-align: justify;
 
-      > p {
+      @include phone {
+        padding: 0;
+        text-align: left;
+      }
+
+      p {
         font-size: 1.5rem;
         line-height: 1.5;
         margin: 0;
         &:last-child {
           margin-top: 3rem;
         }
-        > a {
+        a {
           color: white;
         }
-      }
-
-      @include phone {
-        padding: 0;
-        text-align: left;
       }
     }
 

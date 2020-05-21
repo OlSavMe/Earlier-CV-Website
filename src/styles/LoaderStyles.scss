@@ -1,8 +1,4 @@
-@mixin phone {
-  @media only screen and (max-width: 768px) {
-    @content;
-  }
-}
+@import "./indexStyles";
 
 .loader {
   margin: auto;
@@ -16,11 +12,9 @@
   font-size: 60px;
   color: white;
 
-  > p {
+  p {
     font-size: 2rem;
   }
-  // transform: rotate(360deg);
-  // animation: spinner 1s linear infinite;
 
   @include phone {
     font-size: 40px;

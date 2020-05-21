@@ -1,115 +1,47 @@
-@mixin phone {
-  @media only screen and (max-width: 768px) {
-    @content;
-  }
-}
+@import "./indexStyles";
 
-@mixin tablet {
-  @media only screen and (min-width: 769px) and (max-width: 1023px) {
-    @content;
-  }
-}
-
-@mixin tablet-landscape {
-  @media only screen and (min-width: 1024px) and (max-width: 1299px) {
-    @content;
-  }
-}
-
-@mixin desktop {
-  @media only screen and (min-width: 1300px) and (max-width: 1799px) {
-    @content;
-  }
-}
-
-@mixin big-desktop {
-  @media only screen and (min-width: 1800px) {
-    @content;
-  }
-}
-
-::-webkit-scrollbar {
-  width: 0px;
-  background: transparent; /* make scrollbar transparent */
-}
+@include scrollbars;
 
 .career {
-  height: 100vh;
+  @include max-height-vh;
   justify-items: center;
   scroll-behavior: smooth;
-  // background-color: white;
+  position: fixed;
+  @include zero-margin;
 
-  @include desktop {
-    left: 0;
-    right: 0;
-    top: 0;
-    position: fixed;
-  }
-
-  @include big-desktop {
-    left: 0;
-    right: 0;
-    top: 0;
-    position: fixed;
-  }
-
-  @include tablet-landscape {
-    left: 0;
-    right: 0;
-    top: 0;
-    position: fixed;
-  }
-
-  @include tablet {
-    left: 0;
-    right: 0;
-    top: 0;
-    position: fixed;
+  @include phone {
+    position: static;
   }
 
   .container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    text-align: center;
+    @include max-width;
+    @include max-height-vh;
+    @include flex-col-nowrap;
     align-items: center;
-    color: black;
     position: fixed;
     overflow: scroll;
     margin: 13vh auto;
-    left: 0;
-    right: 0;
     padding: 6% 0;
-    height: 100vh;
-    // background-color: white;
 
-    > h1,
+    h1,
     h2,
     h3 {
       margin: 0;
-
       font-size: 1.5rem;
-      color: #040404;
-      @include phone {
-        font-size: 1.5rem;
-      }
     }
 
     @include phone {
       position: relative;
-      width: 100%;
       margin: auto;
-      padding: 4% 0;
+      padding: 8% 0 0;
     }
 
-    > section {
-      width: 100%;
-      display: flex;
-      padding: 2% 15%;
-      flex-direction: column;
+    section {
+      @include max-width;
+      @include flex-col-nowrap;
       justify-content: center;
       align-items: center;
+      padding: 2% 15%;
       font-size: 1.5rem;
       text-align: center;
 
@@ -118,16 +50,12 @@
         padding: 2%;
       }
 
-      // > span {
-      //   font-size: 1.5rem;
-      // }
-
-      > p,
+      p,
       h3,
       h4 {
         margin: 0.5rem 0;
 
-        > a {
+        a {
           color: black;
           opacity: 0.6;
           &:hover {
@@ -136,32 +64,21 @@
           }
         }
       }
-      > h2 {
+      h2 {
         margin: 0.5rem 0;
         margin-bottom: 0.7rem;
       }
     }
 
-    > section:first-of-type {
-      padding: 2% 15%;
-      text-align: center;
-
-      @include phone {
-        padding: 4%;
-        text-align: center;
-      }
-      > span {
-        padding: 2%;
+    section:first-of-type {
+      span {
+        padding: 3%;
       }
     }
 
-    > section:nth-child(odd) {
-      background: #aba9bb;
+    section:nth-child(odd) {
+      background: $violet;
     }
-
-    // > section:nth-child(even) {
-    //   background: #fff8ec;
-    // }
 
     .white {
       padding: 3% 0 0;
@@ -172,7 +89,7 @@
     }
     .empty {
       min-height: 80px;
-      background: #aba9bb !important;
+      background: $violet !important;
     }
   }
 }
