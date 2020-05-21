@@ -25,7 +25,10 @@ export default function Career() {
         </section>
         <section>
           <h3
-            style={{ color: colorWhite, backgroundColor: backgroundColorDark }}
+            style={{
+              color: colorWhite,
+              backgroundColor: backgroundColorDark,
+            }}
           >
             FRONTEND DEVELOPER
           </h3>
@@ -152,6 +155,15 @@ export default function Career() {
             editing, negotiations with clients, moderation of an online shoe
             store community in a social network
           </p>
+        </section>
+        <section className="white">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path
+              fill="#aba9bb"
+              fill-opacity="1"
+              d="M0,160L80,160C160,160,320,160,480,170.7C640,181,800,203,960,197.3C1120,192,1280,160,1360,144L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
+            ></path>
+          </svg>
         </section>
         <section className="empty"></section>
       </div>

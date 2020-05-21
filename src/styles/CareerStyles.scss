@@ -162,8 +162,17 @@
     // > section:nth-child(even) {
     //   background: #fff8ec;
     // }
+
+    .white {
+      padding: 3% 0 0;
+      background: white !important;
+      .white > svg {
+        display: block;
+      }
+    }
     .empty {
-      min-height: 150px;
+      min-height: 80px;
+      background: #aba9bb !important;
     }
   }
 }
