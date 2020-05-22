@@ -39,8 +39,8 @@ export default function Career() {
           <p>
             Developing responsive user interface of the company's website with{" "}
             <strong>
-              ReactJS and other JS libraries, SASS/SCSS, fetching data from
-              WordPress and Eventbrite REST APIs through Axios client
+              ReactJS and other JS libraries, SCSS, fetching data from WordPress
+              and Eventbrite REST APIs through Axios client
             </strong>
             . Collaboration through <strong>git </strong> version control.
             Teamwork with designers and markerters using Agile approach and

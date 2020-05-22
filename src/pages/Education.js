@@ -30,13 +30,13 @@ export default function Education() {
         <section className="uni">
           <h2>
             Business Information Technologies, Haaga Helia UAS, Helsinki <br />
-            2017-2020 (257 cr GPA 4.08)
+            2017-2020 (257 cr GPA 4.08/5)
           </h2>
           <h2>
             Linguistics and Intercultural Communication, Tver State University,
             Russia
             <br />
-            2002 - 2008 (GPA 4.8)
+            2002 - 2008 (GPA 4.8/5)
           </h2>
         </section>
         <section className="courses">
