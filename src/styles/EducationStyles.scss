@@ -47,8 +47,13 @@
     .uni {
       margin-bottom: 2rem;
       h2 {
+        display: block;
+        min-height: 10vh;
         background: white;
         padding: 0.6rem;
+        @include phone {
+          min-height: 15vh;
+        }
       }
       h2:nth-child(odd) {
         border-radius: 5px 30px 5px;
@@ -61,7 +66,7 @@
     .courses {
       align-items: center;
       > h2:first-of-type {
-        text-decoration: underline;
+        // text-decoration: underline;
         margin-bottom: 1rem;
       }
     }

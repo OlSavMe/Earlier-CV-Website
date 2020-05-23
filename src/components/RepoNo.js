@@ -6,9 +6,7 @@ function RepoNo(props) {
   return (
     <>
       {length ? (
-        <h2 style={{ color: colorWhite, margin: 0, paddingLeft: "1rem" }}>
-          {length} repositories
-        </h2>
+        <h2 style={{ color: "#8b8c93", margin: 0 }}>{length} repositories</h2>
       ) : null}
     </>
   );

@@ -11,10 +11,10 @@ const customStyles = {
   option: (provided, state) => ({
     ...provided,
     borderBottom: "1px #040404",
-    color: state.isSelected ? "green" : "#040404",
+    color: state.isSelected ? "blue" : "#040404",
     padding: 10,
     fontSize: "1.2rem",
-    backgroundColor: state.isSelected ? "#dfd8c8" : "white",
+    backgroundColor: state.isSelected ? "#e4e5e7" : "white",
   }),
   control: (base, state) => ({
     ...base,
@@ -71,7 +71,7 @@ export default function Portfolio() {
   return (
     <div className="portfolio">
       <div className="container">
-        <div className="repos">
+        <div className="headbar">
           <h1>
             My GitHub Repos
             <a
@@ -91,6 +91,8 @@ export default function Portfolio() {
               onChange={handleChange}
             />
           </div>
+        </div>
+        <div className="repos">
           {(() => {
             // eslint-disable-next-line
             switch (selectedValue) {

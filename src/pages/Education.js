@@ -40,7 +40,7 @@ export default function Education() {
           </h2>
         </section>
         <section className="courses">
-          <h2>some of Haaga Helia completed courses:</h2>
+          <h2>...some of Haaga Helia completed courses:</h2>
           {loading ? <Loader /> : <Courses sections={sections} />}
         </section>
         <section className="empty"></section>

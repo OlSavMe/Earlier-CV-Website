@@ -1,0 +1,65 @@
+@import "./indexStyles";
+
+@include scrollbars;
+.outer {
+  @include flex-col-nowrap;
+  align-items: center;
+  .inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    color: white;
+    .single {
+      overflow: hidden;
+      width: calc(50% - 10px);
+      margin: 20px 0;
+      font-size: 2rem;
+      padding: 1.5rem;
+      background-color: $violet;
+      //   background-color: #e4e5e7;
+      //   background-color: $wheat;
+      border-radius: 15px;
+      box-shadow: 0 8px 6px -6px black;
+      @include phone {
+        margin: 2% 1%;
+        font-size: 1.2rem;
+        width: calc(100% - 20px);
+      }
+      a {
+        width: 40px;
+        color: white;
+        text-decoration: none;
+        // background: #2a2e43;
+
+        // border-radius: 5px;
+        padding: 0;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      p {
+        font-size: 1.4rem;
+        color: $very-dark-gray;
+        margin: 0;
+      }
+
+      span {
+        a {
+          font-size: 1.8rem;
+          color: $very-dark-gray;
+          background: none;
+          text-decoration: none;
+          @include phone {
+            font-size: 1.2rem;
+          }
+          &:hover {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+}

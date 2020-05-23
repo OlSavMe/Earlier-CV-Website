@@ -3,6 +3,7 @@ import Axios from "axios";
 import Loader from "./Loader";
 import RepoNo from "./RepoNo";
 import { allRepos } from "../Constants";
+import "../styles/repoStyles.scss";
 
 export default function AllRepos() {
   const [repos, setRepos] = useState([]);
@@ -28,11 +29,11 @@ export default function AllRepos() {
   const length = nofork.length;
 
   return (
-    <>
-      <ul>
-        <RepoNo length={length} />
+    <div className="outer">
+      <RepoNo length={length} />
+      <div className="inner">
         {nofork.map((repo) => (
-          <li key={repo.id}>
+          <div key={repo.id} className="single">
             <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
               {" "}
               {repo.name}
@@ -49,11 +50,11 @@ export default function AllRepos() {
                 </a>
               </span>
             ) : null}
-          </li>
+          </div>
         ))}
         {loading && <Loader />}
-      </ul>
-      <section style={{ minHeight: "500px" }}></section>
-    </>
+      </div>
+      {/* <section style={{ minHeight: "500px" }}></section> */}
+    </div>
   );
 }

@@ -58,7 +58,7 @@
         }
       }
       a.MuiBottomNavigationAction-root.Mui-selected {
-        color: $nav-selected;
+        text-decoration: underline;
       }
     }
   }
