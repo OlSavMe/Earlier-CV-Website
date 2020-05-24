@@ -3,6 +3,8 @@ import Axios from "axios";
 import Loader from "./Loader";
 import RepoNo from "./RepoNo";
 import { sortedRepos } from "../Constants";
+import RepoLayout from "./RepoLayout";
+import "../styles/repoStyles.scss";
 
 export default function SortedUpdateRepos() {
   const [sorted, setSorted] = useState([]);
@@ -28,32 +30,15 @@ export default function SortedUpdateRepos() {
   const length = nofork.length;
 
   return (
-    <>
-      <ul>
-        <RepoNo length={length} />
+    <div className="outer">
+      <RepoNo length={length} />
+      <div className="inner">
         {nofork.map((repo) => (
-          <li key={repo.id}>
-            <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
-              {" "}
-              {repo.name}
-            </a>
-            <p>{repo.description}</p>
-            {repo.homepage ? (
-              <span>
-                <a
-                  href={repo.homepage}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {repo.homepage}
-                </a>
-              </span>
-            ) : null}
-          </li>
+          <RepoLayout key={repo.id} {...repo} />
         ))}
         {loading && <Loader />}
-      </ul>
-      <section style={{ minHeight: "500px" }}></section>
-    </>
+      </div>
+      <section style={{ minHeight: "300px" }}></section>
+    </div>
   );
 }

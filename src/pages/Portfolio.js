@@ -11,7 +11,7 @@ const customStyles = {
   option: (provided, state) => ({
     ...provided,
     borderBottom: "1px #040404",
-    color: state.isSelected ? "blue" : "#040404",
+    color: state.isSelected ? "#aba9bb" : "#040404",
     padding: 10,
     fontSize: "1.2rem",
     backgroundColor: state.isSelected ? "#e4e5e7" : "white",

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import Loader from "./Loader";
 import RepoNo from "./RepoNo";
+import RepoLayout from "./RepoLayout";
 import { allRepos } from "../Constants";
 import "../styles/repoStyles.scss";
 
@@ -33,28 +34,11 @@ export default function AllRepos() {
       <RepoNo length={length} />
       <div className="inner">
         {nofork.map((repo) => (
-          <div key={repo.id} className="single">
-            <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
-              {" "}
-              {repo.name}
-            </a>
-            <p>{repo.description}</p>
-            {repo.homepage ? (
-              <span>
-                <a
-                  href={repo.homepage}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {repo.homepage}
-                </a>
-              </span>
-            ) : null}
-          </div>
+          <RepoLayout key={repo.id} {...repo} />
         ))}
         {loading && <Loader />}
       </div>
-      {/* <section style={{ minHeight: "500px" }}></section> */}
+      <section style={{ minHeight: "300px" }}></section>
     </div>
   );
 }

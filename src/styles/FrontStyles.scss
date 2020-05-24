@@ -35,6 +35,7 @@
     background: rgba(0, 0, 0, 0.5);
 
     @include phone {
+      @include flex-col-nowrap;
       position: relative;
       @include max-width;
       margin: auto;
@@ -53,6 +54,7 @@
     }
 
     .profile {
+      flex: 1;
       @include flex-col-wrap;
       margin-right: 0;
 
@@ -131,6 +133,10 @@
               padding-right: 0.5rem;
               height: 20px;
             }
+
+            @include tablet {
+              display: none;
+            }
           }
         }
       }
@@ -146,6 +152,10 @@
           padding: 1rem 0;
         }
 
+        @include tablet {
+          padding: 1rem 0;
+        }
+
         a img {
           height: 60px;
           border-radius: 50%;
@@ -157,6 +167,10 @@
 
           @include phone {
             height: 50px;
+          }
+
+          @include tablet {
+            height: 40px;
           }
         }
       }
@@ -189,7 +203,7 @@
     }
 
     .empty {
-      height: 1300px;
+      min-height: 1300px;
     }
   }
 }
