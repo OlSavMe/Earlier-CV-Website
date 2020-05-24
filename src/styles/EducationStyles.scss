@@ -45,21 +45,43 @@
     }
 
     .uni {
+      @include max-width;
+      @include flex-row-wrap;
+      justify-content: space-evenly;
+      align-items: center;
       margin-bottom: 2rem;
+      padding: 1%;
+
+      @include phone {
+        @include flex-col-nowrap;
+      }
+
+      @include tablet {
+        @include flex-col-nowrap;
+      }
+
+      @include tablet-landscape {
+        @include flex-col-nowrap;
+      }
+
       h2 {
-        display: block;
-        min-height: 10vh;
+        width: calc(60% - 10px);
         background: white;
-        padding: 0.6rem;
+        padding: 2rem;
+        overflow: hidden;
+        border-radius: 5px 30px 5px;
         @include phone {
-          min-height: 15vh;
+          height: calc(60% - 20px);
+          @include max-width;
         }
-      }
-      h2:nth-child(odd) {
-        border-radius: 5px 30px 5px;
-      }
-      h2:nth-child(even) {
-        border-radius: 5px 30px 5px;
+        @include tablet {
+          height: calc(60% - 20px);
+          @include max-width;
+        }
+        @include tablet-landscape {
+          height: calc(60% - 20px);
+          @include max-width;
+        }
       }
     }
 
