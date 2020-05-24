@@ -16,7 +16,7 @@ export default function Education() {
     getSections();
   }, []); // eslint-disable-line
 
-  const getSections = async (milliseconds = 200) => {
+  const getSections = async (milliseconds = 20000) => {
     await sleep(milliseconds);
     Axios.get("../../Edu.json").then((response) => {
       setSections(response.data.sections);

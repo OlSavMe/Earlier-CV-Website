@@ -1,32 +1,10 @@
-import React, { useState, useEffect } from "react";
-import Axios from "axios";
-import Loader from "./Loader";
+import React from "react";
 import RepoNo from "./RepoNo";
 import RepoLayout from "./RepoLayout";
-import { allRepos } from "../Constants";
 import "../styles/repoStyles.scss";
 
-export default function AllRepos() {
-  const [repos, setRepos] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    getAllRepos(); // eslint-disable-next-line
-  }, []);
-
-  const sleep = (milliseconds) => {
-    return new Promise((resolve) => setTimeout(resolve, milliseconds));
-  };
-
-  const getAllRepos = async (milliseconds = 200) => {
-    await sleep(milliseconds);
-    Axios.get(`${allRepos}`).then((response) => {
-      setRepos(response.data);
-      setLoading(false);
-    });
-  };
-
-  const nofork = repos.filter((repo) => repo.fork === false);
+export default function AllRepos(props) {
+  const nofork = props.nofork;
   const length = nofork.length;
 
   return (
@@ -36,7 +14,6 @@ export default function AllRepos() {
         {nofork.map((repo) => (
           <RepoLayout key={repo.id} {...repo} />
         ))}
-        {loading && <Loader />}
       </div>
       <section style={{ minHeight: "300px" }}></section>
     </div>

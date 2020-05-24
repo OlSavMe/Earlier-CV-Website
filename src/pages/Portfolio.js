@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/PortfolioStyles.scss";
 import "../App.scss";
+import Axios from "axios";
+import Loader from "../components/Loader";
 import Select from "react-select";
-import AllRepos from ".././components/AllRepos";
+import AllRepos from "../components/AllRepos";
+import { sortedRepos } from "../Constants";
 import ByLangRepos from ".././components/ByLangRepos";
-import SortedUpdateRepos from ".././components/SortedUpdateRepos";
 import DeployedRepos from ".././components/DeployedRepos";
 
 const customStyles = {
@@ -36,10 +38,6 @@ const customStyles = {
 export default function Portfolio() {
   const data = [
     {
-      value: "By latest update",
-      label: "By latest update",
-    },
-    {
       value: "Only deployed",
       label: "Only deployed",
     },
@@ -63,9 +61,46 @@ export default function Portfolio() {
 
   const [selectedValue, setSelectedValue] = useState("All repositories");
 
+  const [sorted, setSorted] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  const sleep = (milliseconds) => {
+    return new Promise((resolve) => setTimeout(resolve, milliseconds));
+  };
+
+  useEffect(() => {
+    getSorted(); // eslint-disable-next-line
+  }, []);
+
+  const getSorted = async (milliseconds = 200) => {
+    await sleep(milliseconds);
+    Axios.get(`${sortedRepos}`).then((response) => {
+      setSorted(response.data);
+      setLoading(false);
+    });
+  };
+
+  const nofork = sorted.filter((repo) => repo.fork === false);
+
   // handle onChange event of the dropdown
   const handleChange = (e) => {
     setSelectedValue(e.value);
+  };
+
+  const getRepo = () => {
+    // eslint-disable-next-line
+    switch (selectedValue) {
+      case "All repositories":
+        return <AllRepos nofork={nofork} />;
+      case "Java":
+        return <ByLangRepos selectedValue={selectedValue} nofork={nofork} />;
+      case "JavaScript":
+        return <ByLangRepos selectedValue={selectedValue} nofork={nofork} />;
+      case "HTML":
+        return <ByLangRepos selectedValue={selectedValue} nofork={nofork} />;
+      case "Only deployed":
+        return <DeployedRepos nofork={nofork} />;
+    }
   };
 
   return (
@@ -92,25 +127,7 @@ export default function Portfolio() {
             />
           </div>
         </div>
-        <div className="repos">
-          {(() => {
-            // eslint-disable-next-line
-            switch (selectedValue) {
-              case "By latest update":
-                return <SortedUpdateRepos />;
-              case "All repositories":
-                return <AllRepos />;
-              case "Java":
-                return <ByLangRepos selectedValue={selectedValue} />;
-              case "JavaScript":
-                return <ByLangRepos selectedValue={selectedValue} />;
-              case "HTML":
-                return <ByLangRepos selectedValue={selectedValue} />;
-              case "Only deployed":
-                return <DeployedRepos />;
-            }
-          })()}
-        </div>
+        {loading ? <Loader /> : <div className="repos">{getRepo()}</div>}
       </div>
     </div>
   );
