@@ -8,32 +8,7 @@ import AllRepos from "../components/AllRepos";
 import { sortedRepos } from "../Constants";
 import ByLangRepos from ".././components/ByLangRepos";
 import DeployedRepos from ".././components/DeployedRepos";
-
-const customStyles = {
-  option: (provided, state) => ({
-    ...provided,
-    borderBottom: "1px #040404",
-    color: state.isSelected ? "#aba9bb" : "#040404",
-    padding: 10,
-    fontSize: "1.2rem",
-    backgroundColor: state.isSelected ? "#e4e5e7" : "white",
-  }),
-  control: (base, state) => ({
-    ...base,
-    fontSize: "1.2rem",
-    background: "white",
-    borderRadius: state.isFocused ? "3px 3px 0 0" : 3,
-    borderColor: state.isFocused ? "#49494b" : "#040404",
-    boxShadow: state.isFocused ? "#dfd8c8" : "#040404",
-    "&:hover": {
-      borderColor: state.isFocused ? "#49494b" : "#040404",
-    },
-  }),
-  indicatorsContainer: (base) => ({
-    ...base,
-    padding: 3,
-  }),
-};
+import selectStyles from "../styles/selectStyles";
 
 export default function Portfolio() {
   const data = [
@@ -119,7 +94,7 @@ export default function Portfolio() {
           </h1>
           <div className="select">
             <Select
-              styles={customStyles}
+              styles={selectStyles}
               placeholder="Search by type..."
               value={data.selectedValue} // set selected value
               options={data} // set list of the data

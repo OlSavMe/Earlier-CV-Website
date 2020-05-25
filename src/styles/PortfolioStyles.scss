@@ -12,6 +12,7 @@
     @include max-height-vh;
     @include flex-col-nowrap;
     justify-content: flex-start;
+
     position: fixed;
     overflow: scroll;
     scroll-behavior: smooth;

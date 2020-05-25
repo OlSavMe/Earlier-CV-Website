@@ -1,5 +1,4 @@
 import React from "react";
-import { colorWhite } from "../styles/centralStyles";
 
 function RepoNo(props) {
   const length = props.length;
