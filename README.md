@@ -6,7 +6,9 @@ My CV website [deployed here](https://o-savka.firebaseapp.com/).
 - React Router
 - Axios
 - JSON
+- GitHub API
 - React Material-UI
 - react-select
 - SCSS
+
 
