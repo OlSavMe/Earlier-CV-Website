@@ -45,23 +45,50 @@
     }
 
     .uni {
+      @include max-width;
+      @include flex-row-wrap;
+      justify-content: space-evenly;
+      align-items: center;
       margin-bottom: 2rem;
+      padding: 1%;
+
+      @include phone {
+        @include flex-col-nowrap;
+      }
+
+      @include tablet {
+        @include flex-col-nowrap;
+      }
+
+      @include tablet-landscape {
+        @include flex-col-nowrap;
+      }
+
       h2 {
+        width: calc(60% - 10px);
         background: white;
-        padding: 0.6rem;
-      }
-      h2:nth-child(odd) {
+        padding: 2rem;
+        overflow: hidden;
         border-radius: 5px 30px 5px;
-      }
-      h2:nth-child(even) {
-        border-radius: 5px 30px 5px;
+        @include phone {
+          height: calc(60% - 20px);
+          @include max-width;
+        }
+        @include tablet {
+          height: calc(60% - 20px);
+          @include max-width;
+        }
+        @include tablet-landscape {
+          height: calc(60% - 20px);
+          @include max-width;
+        }
       }
     }
 
     .courses {
       align-items: center;
       > h2:first-of-type {
-        text-decoration: underline;
+        // text-decoration: underline;
         margin-bottom: 1rem;
       }
     }
