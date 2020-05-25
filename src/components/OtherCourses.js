@@ -1,33 +1,11 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { useStyles } from "../styles/ExpandedPanelSyles";
 import ExpansionPanel from "@material-ui/core/ExpansionPanel";
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import InsertLinkIcon from "@material-ui/icons/InsertLink";
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    width: "100%",
-  },
-  heading: {
-    fontSize: theme.typography.pxToRem(20),
-    flexShrink: "50%",
-    fontFamily: "Belleza",
-    textDecoration: "none",
-    transition: "all 600ms",
-    "&:hover": {
-      fontSize: theme.typography.pxToRem(23),
-    },
-  },
-  secondaryHeading: {
-    fontSize: theme.typography.pxToRem(18),
-    color: theme.palette.text.secondary,
-    paddingLeft: "1%",
-    fontFamily: "Belleza",
-  },
-}));
 
 export default function OtherCourses(props) {
   const other = props.other;
