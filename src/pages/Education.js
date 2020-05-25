@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "../styles/EducationStyles.scss";
 import Courses from "../components/Courses";
+import OtherCourses from "../components/OtherCourses";
 import Loader from "../components/Loader";
 import Axios from "axios";
 
 export default function Education() {
   const [sections, setSections] = useState([]);
+  const [other, setOther] = useState([]);
   const [loading, setLoading] = useState(true);
 
   const sleep = (milliseconds) => {
@@ -20,6 +22,7 @@ export default function Education() {
     await sleep(milliseconds);
     Axios.get("../../Edu.json").then((response) => {
       setSections(response.data.sections);
+      setOther(response.data.other);
       setLoading(false);
     });
   };
@@ -43,6 +46,10 @@ export default function Education() {
         <section className="courses">
           <h2>...some of Haaga Helia completed courses:</h2>
           {loading ? <Loader /> : <Courses sections={sections} />}
+        </section>
+        <section className="other">
+          <h2>...other courses:</h2>
+          <OtherCourses other={other} />
         </section>
         <section className="empty"></section>
       </div>

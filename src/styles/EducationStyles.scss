@@ -93,6 +93,10 @@
       }
     }
 
+    .other {
+      @include max-width;
+    }
+
     .empty {
       min-height: 300px;
     }

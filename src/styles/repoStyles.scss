@@ -30,12 +30,13 @@
         width: 40px;
         color: white;
         text-decoration: none;
-        // background: #2a2e43;
-
-        // border-radius: 5px;
         padding: 0;
 
         &:hover {
+          text-decoration: underline;
+        }
+
+        @include phone {
           text-decoration: underline;
         }
       }
