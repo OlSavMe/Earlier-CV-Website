@@ -10,5 +10,6 @@ My CV website [deployed here](https://o-savka.firebaseapp.com/).
 - React Material-UI
 - react-select
 - SCSS
+- Firebase
 
 
