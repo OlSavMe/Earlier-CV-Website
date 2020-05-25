@@ -6,8 +6,9 @@ import Loader from "../components/Loader";
 import Select from "react-select";
 import AllRepos from "../components/AllRepos";
 import { sortedRepos } from "../Constants";
-import ByLangRepos from ".././components/ByLangRepos";
-import DeployedRepos from ".././components/DeployedRepos";
+import ByLangRepos from "../components/ByLangRepos";
+import DeployedRepos from "../components/DeployedRepos";
+import ReactRepos from "../components/ReactRepos";
 import selectStyles from "../styles/selectStyles";
 
 export default function Portfolio() {
@@ -15,6 +16,10 @@ export default function Portfolio() {
     {
       value: "Only deployed",
       label: "Only deployed",
+    },
+    {
+      value: "Only React",
+      label: "Only React",
     },
     {
       value: "Java",
@@ -75,6 +80,8 @@ export default function Portfolio() {
         return <ByLangRepos selectedValue={selectedValue} nofork={nofork} />;
       case "Only deployed":
         return <DeployedRepos nofork={nofork} />;
+      case "Only React":
+        return <ReactRepos nofork={nofork} />;
     }
   };
 
