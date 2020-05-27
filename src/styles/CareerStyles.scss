@@ -65,9 +65,19 @@
           }
         }
       }
-      h2 {
+
+      .positionWhite {
         margin: 0.5rem 0;
-        margin-bottom: 0.7rem;
+        h3:first-of-type {
+          color: white;
+        }
+      }
+
+      .positionBlue {
+        margin: 0.5rem 0;
+        h3:first-of-type {
+          color: #001b8e;
+        }
       }
     }
 

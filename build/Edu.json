@@ -155,5 +155,25 @@
         }
       ]
     }
+  ],
+  "other": [
+    {
+      "id": 1,
+      "title": "App Development Workshop (TDD), The Shortcut, 2019",
+      "link": "https://www.facebook.com/events/412541739540245/?event_time_id=412541749540244",
+      "desc": "Test driven app development with CircleCI"
+    },
+    {
+      "id": 2,
+      "title": "AWS Serverless Workshop, The Shortcut, 2019",
+      "link": "https://www.facebook.com/events/the-shortcut/aws-serverless-workshop/422780971879145/",
+      "desc": "Building a dynamic, serverless web application with AWS tools"
+    },
+    {
+      "id": 3,
+      "title": "Digital Prototyping Week, The Shortcut, 2019",
+      "link": "https://www.facebook.com/events/471590873572628/?event_time_id=471590890239293",
+      "desc": "Developing an application digital prototype based on business idea, testing UX, pitching the project to jury. Figma workshop"
+    }
   ]
 }

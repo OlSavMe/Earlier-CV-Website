@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "../styles/PortfolioStyles.scss";
-import "../App.scss";
 import Axios from "axios";
 import Loader from "../components/Loader";
 import Select from "react-select";
@@ -10,37 +9,10 @@ import ByLangRepos from "../components/ByLangRepos";
 import DeployedRepos from "../components/DeployedRepos";
 import ReactRepos from "../components/ReactRepos";
 import selectStyles from "../styles/selectStyles";
+import { portfolioSelectData as data } from "./PagesData";
 
 export default function Portfolio() {
-  const data = [
-    {
-      value: "Only deployed",
-      label: "Only deployed",
-    },
-    {
-      value: "Only React",
-      label: "Only React",
-    },
-    {
-      value: "Java",
-      label: "Java",
-    },
-    {
-      value: "JavaScript",
-      label: "JavaScript | ReactJS | React Native",
-    },
-    {
-      value: "HTML",
-      label: "HTML | CSS | JQuery | BootStrap",
-    },
-    {
-      value: "All repositories",
-      label: "All repositories",
-    },
-  ];
-
   const [selectedValue, setSelectedValue] = useState("All repositories");
-
   const [sorted, setSorted] = useState([]);
   const [loading, setLoading] = useState(true);
 

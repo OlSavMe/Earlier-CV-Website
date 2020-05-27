@@ -1,6 +1,5 @@
 import React from "react";
 import "../styles/FrontStyles.scss";
-import "../App.scss";
 import bannervideo from "../images/ducks.mp4";
 import poster from "../images/backimg.jpeg";
 
