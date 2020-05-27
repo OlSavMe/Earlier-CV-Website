@@ -17,7 +17,10 @@ export default function Position(props) {
         {title}
       </h3>
       {positions.map((position) => (
-        <div className={index % 2 ? "positionBlue" : "positionWhite"}>
+        <div
+          key={position.company}
+          className={index % 2 ? "positionBlue" : "positionWhite"}
+        >
           <h3>
             <strong>{position.company}</strong>
           </h3>
@@ -31,7 +34,7 @@ export default function Position(props) {
               </a>
             )}
           </p>
-          {position.link === "" ? null : <p>{position.desctwo}</p>}
+          {position.desctwo === "" ? null : <p>{position.desctwo}</p>}
         </div>
       ))}
     </section>
