@@ -62,8 +62,9 @@ export default function Front() {
         </div>
         <section className="hash">
           <p>
-            Hi! I am a web developer with hands-on experience in JavaScript and
-            ReactJS frontend development in team projects.{" "}
+            Hi! I am a web developer with hands-on experience of JavaScript and
+            ReactJS development in team projects, including creating responsive
+            interfaces, configuring API requests, working with headless CMS.{" "}
             <a
               href="https://github.com/OlSavMe/Current-CV-Website"
               target="_blank"
@@ -71,12 +72,11 @@ export default function Front() {
             >
               This website
             </a>{" "}
-            is my pet project. I've gained basic knowledge of Node.js, Java,
-            C/C++, SQL, Azure DevOps through my university studies. In 2020, I
-            am graduating as a software developer from Haaga-Helia UAS,
-            Helsinki. In my pre-IT career I worked as an English technical
-            translator. Find the details in the Portfolio, Career and Education
-            sections of this site.
+            is my pet project. I've gained knowledge of Node.js, Java, C/C++,
+            Azure DevOps through my university studies. In 2020, I am graduating
+            as a software developer from Haaga-Helia UAS, Helsinki. In my pre-IT
+            career I worked as an English technical translator. Find the details
+            in the Portfolio, Career and Education sections of this site.
           </p>
           <p>...or scroll down to watch the ducks.</p>
         </section>

@@ -14,9 +14,17 @@ export default function Career() {
         </h3>
         <section>
           <span>
-            During 2019 - 2020 I worked in several team projects as a
-            React/JavaScript developer; I also did digital prototyping for 2
-            week-long sprints.
+            <p>
+              {" "}
+              During 2019 - 2020 I've worked in several team projects as a
+              React/JavaScript developer.
+            </p>
+            <p>
+              {" "}
+              Tools I've used at work include: ReactJS and other JavaScript
+              libraries, SASS/SCSS, SQL, Axios, git version control, WordPress
+              as headless CMS, Figma for wireframes.
+            </p>
           </span>
           <span>
             In my pre-IT career I was an English technical translator for 7
