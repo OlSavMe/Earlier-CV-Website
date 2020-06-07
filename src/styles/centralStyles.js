@@ -1,4 +1,6 @@
 export const backgroundColorDark = "#2A2E43";
+// export const backgroundColorDark = "#98c4db";
+
 export const backgroundColorLight = "#FFFFFF";
 export const backgroundColorBlue = "#5773FF";
 

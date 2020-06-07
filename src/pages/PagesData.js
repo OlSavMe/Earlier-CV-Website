@@ -6,7 +6,7 @@ export const careerData = [
         company: "The Shortcut, Helsinki",
         period: "Jan 2020 - ongoing",
         desc:
-          "Developing responsive user interface of the company's website with ReactJS, SCSS, fetching data from WordPress and Eventbrite REST APIs with Axios client. GitHub based collaboration. Teamwork with designers and markerters using Agile approach and Trello boards. Deployment of MVPs on Firebase platform.",
+          "Developing responsive user interface of the company's website with ReactJS, SCSS, fetching data from WordPress and Eventbrite REST APIs with Axios client. Monitoring GitHub based collaboration. Teamwork with designers and markerters using Agile approach and Trello boards. Deployment of MVPs on Firebase platform.",
         link: "https://github.com/OlSavMe/React-Shortcut-Website",
         desctwo:
           "Creating JSON data and visual charts for the interface of the Database Management System with ReactJS, react-chartjs-2, using Docker Containers for local dev environment. Teamwork with the backend developer and data analysts.",

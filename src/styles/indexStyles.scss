@@ -38,6 +38,12 @@
   flex-wrap: wrap;
 }
 
+@mixin flex-row-nowrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
 @mixin transp-background {
   background-color: transparent;
 }
@@ -49,8 +55,14 @@
   }
 }
 
+@mixin phone-landscape {
+  @media only screen and (min-width: 769px) and (max-height: 600px) {
+    @content;
+  }
+}
+
 @mixin no-mobile {
-  @media only screen and (min-width: 769px) {
+  @media only screen and (min-width: 769px) and (min-height: 600px) {
     @content;
   }
 }
@@ -83,6 +95,12 @@
 $egg-plant: #49494b;
 $egg-plant-pale: #5b5b61;
 $wheat: #dfd8c8;
-$very-dark-gray: #040404;
-$nav-selected: #a39274;
-$violet: #aba9bb;
+// $very-dark-gray: #040404;
+$very-dark-gray: #141d2e;
+// $nav-selected: #a39274;
+$nav-selected: #c0c0c0;
+// $violet: #aba9bb;
+
+$heaven: #b0dbec;
+$dark: #2a2e43;
+$violet: #7c9ec3;

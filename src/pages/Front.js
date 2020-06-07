@@ -1,14 +1,20 @@
 import React from "react";
 import "../styles/FrontStyles.scss";
-import bannervideo from "../images/ducks.mp4";
-import poster from "../images/backimg.jpeg";
+
+// import poster from "../images/backimg.jpeg";
 
 export default function Front() {
   return (
     <div className="front">
-      <video autoPlay muted loop poster={poster}>
+      {/* <video autoPlay muted loop poster={poster}>
         <source src={bannervideo} type="video/mp4" />
-      </video>
+      </video> */}
+      <img
+        className="mobimage"
+        src={require("../images/smob.jpeg")}
+        alt="sea"
+      />
+      <img className="descimage" src={require("../images/s.jpeg")} alt="sea" />
 
       <div className="container">
         <div className="profile">
@@ -62,23 +68,32 @@ export default function Front() {
         </div>
         <section className="hash">
           <p>
-            Hi! I am a web developer with hands-on experience of JavaScript and
-            ReactJS development in team projects, including creating responsive
-            interfaces, configuring API requests, working with headless CMS.{" "}
+            Hi! My name is Olga Savka and{" "}
             <a
               href="https://github.com/OlSavMe/Current-CV-Website"
               target="_blank"
               rel="noopener noreferrer"
             >
-              This website
+              this website
             </a>{" "}
-            is my pet project. I've gained knowledge of Node.js, Java, C/C++,
-            Azure DevOps through my university studies. In 2020, I am graduating
-            as a software developer from Haaga-Helia UAS, Helsinki. In my pre-IT
-            career I worked as an English technical translator. Find the details
-            in the Portfolio, Career and Education sections of this site.
+            is my pet project.
           </p>
-          <p>...or scroll down to watch the ducks.</p>
+          <p>
+            {" "}
+            I am a web developer with hands-on experience in JavaScript and
+            ReactJS development team projects. This includes: creating
+            responsive interfaces, configuring API requests, working with
+            headless CMS. Through my university studies I have also gained
+            knowledge of Node.js, Java, C/C++ and Azure DevOps. In 2020, I will
+            be graduating as a software developer from Haaga-Helia UAS,
+            Helsinki.
+          </p>
+          <p>
+            {" "}
+            Before my IT career I worked as an English technical translator. For
+            further information surrounding my portfolio, career and education
+            please click the relevant section above...
+          </p>
         </section>
         <section className="empty"></section>
       </div>

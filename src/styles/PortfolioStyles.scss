@@ -17,8 +17,6 @@
     scroll-behavior: smooth;
     margin: 9vh auto;
     padding: 3% 5%;
-    // background-color: #c7c6d2;
-    background-attachment: #f6f5f3;
 
     @include phone {
       position: relative;
@@ -35,7 +33,7 @@
       }
 
       h1 {
-        color: #202428;
+        color: $dark;
         padding: 1rem;
         @include phone {
           font-size: 1.3rem;
@@ -43,7 +41,7 @@
 
         a {
           margin-left: 1rem;
-          color: #202428;
+          color: $dark;
           text-decoration: underline;
           transition: all 500ms;
           &:hover {

@@ -6,7 +6,7 @@
   @include max-height-vh;
   justify-items: center;
   scroll-behavior: smooth;
-  background-color: $wheat;
+  background-color: $violet;
   position: fixed;
   @include zero-margin;
 
@@ -26,7 +26,7 @@
     left: 0;
     right: 0;
     padding: 2% 10%;
-    background-color: $wheat;
+    background-color: $violet;
 
     @include phone {
       position: relative;
@@ -46,7 +46,7 @@
 
     .uni {
       @include max-width;
-      @include flex-row-wrap;
+      @include flex-row-nowrap;
       justify-content: space-evenly;
       align-items: center;
       margin-bottom: 2rem;
@@ -69,7 +69,7 @@
         background: white;
         padding: 2rem;
         overflow: hidden;
-        border-radius: 5px 30px 5px;
+        border-radius: 10px;
         @include phone {
           height: calc(60% - 20px);
           @include max-width;
@@ -82,14 +82,17 @@
           height: calc(60% - 20px);
           @include max-width;
         }
+
+        @include desktop {
+          min-height: 100%;
+        }
       }
     }
 
     .courses {
       align-items: center;
       > h2:first-of-type {
-        // text-decoration: underline;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
       }
     }
 

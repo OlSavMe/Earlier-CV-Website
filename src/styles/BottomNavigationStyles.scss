@@ -10,7 +10,7 @@
       height: 100%;
 
       a {
-        color: black;
+        color: $dark;
         @include transp-background;
       }
       a.MuiBottomNavigationAction-root {
@@ -18,6 +18,47 @@
       }
       a.MuiBottomNavigationAction-root.Mui-selected {
         color: $nav-selected;
+      }
+    }
+  }
+}
+
+@include phone-landscape {
+  header.bottom-navigation {
+    position: fixed;
+    box-shadow: none;
+
+    div.MuiBottomNavigation-root {
+      @include transp-background;
+      height: 100%;
+
+      a {
+        color: $dark;
+        @include transp-background;
+      }
+      a.MuiButtonBase-root {
+        margin: 0.5rem 2.5rem 0 2.5rem;
+      }
+      a.MuiBottomNavigationAction-root {
+        @include transp-background;
+        span.MuiBottomNavigationAction-wrapper {
+          flex-direction: row;
+          justify-content: center;
+          svg.MuiSvgIcon-root {
+            display: none;
+          }
+          span.MuiBottomNavigationAction-label {
+            font-size: 1.5rem;
+            font-family: "Belleza", sans-serif;
+            transition: 600ms;
+          }
+          span.MuiBottomNavigationAction-label:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+      a.MuiBottomNavigationAction-root.Mui-selected {
+        text-decoration: underline;
       }
     }
   }
@@ -33,7 +74,7 @@
       height: 100%;
 
       a {
-        color: $very-dark-gray;
+        color: $dark;
         @include transp-background;
       }
       a.MuiButtonBase-root {

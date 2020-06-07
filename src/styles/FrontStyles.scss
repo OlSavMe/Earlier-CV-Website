@@ -8,7 +8,7 @@
   justify-items: center;
   overflow: hidden;
 
-  video {
+  .descimage {
     object-fit: cover;
     width: 100vw;
     @include max-height-vh;
@@ -16,7 +16,36 @@
     top: 0;
     left: 0;
     z-index: -100;
-    background-color: wheat;
+
+    @include phone {
+      display: none;
+    }
+  }
+
+  .mobimage {
+    object-fit: cover;
+    width: 100vw;
+    @include max-height-vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -100;
+
+    @include no-mobile {
+      display: none;
+    }
+  }
+
+  video {
+    display: none;
+    // object-fit: cover;
+    // width: 100vw;
+    // @include max-height-vh;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // z-index: -100;
+    // background-color: wheat;
   }
 
   .container {
@@ -32,13 +61,18 @@
     scroll-behavior: smooth;
     padding: 5%;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(17, 9, 9, 0.7);
 
     @include phone {
       @include flex-col-nowrap;
       position: relative;
       @include max-width;
       margin: auto;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    @include phone-landscape {
+      margin-top: 3em;
     }
 
     @include big-desktop {
@@ -191,9 +225,9 @@
       }
 
       p {
-        margin: 0;
-        &:last-child {
-          margin-top: 3rem;
+        margin-top: 1rem;
+        &:first-child {
+          margin: 0;
         }
         a {
           color: white;
