@@ -16,7 +16,7 @@
 
   .container {
     @include max-width;
-    @include max-height-vh;
+    height: 100%;
     @include flex-col-nowrap;
     text-align: center;
     align-items: center;
@@ -29,7 +29,6 @@
     background-color: $violet;
 
     @include phone {
-      position: relative;
       @include max-width;
       margin: auto;
       padding: 4% 1%;

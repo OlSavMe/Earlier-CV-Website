@@ -61,8 +61,7 @@
 
     @include phone {
       @include flex-col-nowrap;
-      position: relative;
-      @include max-width;
+      width: 95%;
       margin: auto;
       background: rgba(0, 0, 0, 0.6);
     }
