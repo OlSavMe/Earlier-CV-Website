@@ -81,14 +81,16 @@ export default function Portfolio() {
             />
           </div>
         </div>
-        {loading ? (
-          <div className="load">
-            {" "}
-            <Loader />{" "}
-          </div>
-        ) : (
-          <div className="repos">{getRepo()}</div>
-        )}
+        <section>
+          {loading ? (
+            <div className="load">
+              {" "}
+              <Loader />{" "}
+            </div>
+          ) : (
+            <div className="repos">{getRepo()}</div>
+          )}
+        </section>
       </div>
     </div>
   );

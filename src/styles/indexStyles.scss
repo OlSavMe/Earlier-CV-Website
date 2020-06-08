@@ -17,7 +17,7 @@
 }
 
 @mixin max-height-vh {
-  height: 100vh;
+  height: 100%;
 }
 
 @mixin flex-col-nowrap {
@@ -56,13 +56,13 @@
 }
 
 @mixin phone-landscape {
-  @media only screen and (min-width: 769px) and (max-height: 600px) {
+  @media only screen and (min-width: 769px) and (max-height: 700px) {
     @content;
   }
 }
 
 @mixin no-mobile {
-  @media only screen and (min-width: 769px) and (min-height: 600px) {
+  @media only screen and (min-width: 769px) and (min-height: 700px) {
     @content;
   }
 }

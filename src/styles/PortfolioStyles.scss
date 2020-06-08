@@ -65,18 +65,21 @@
       }
     }
 
-    .load {
-      @include max-width;
-      text-align: center;
-    }
+    section {
+      align-content: center;
+      .load {
+        @include max-width;
+        text-align: center;
+      }
 
-    .repos {
-      @include flex-col-nowrap;
-      padding: 0;
-      margin-right: 0;
-
-      @include phone {
+      .repos {
+        @include flex-col-nowrap;
         padding: 0;
+        margin-right: 0;
+
+        @include phone {
+          padding: 0;
+        }
       }
     }
   }
