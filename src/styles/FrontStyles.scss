@@ -81,6 +81,7 @@
 
     @include tablet {
       width: 90%;
+      @include flex-col-nowrap;
     }
 
     @include tablet-landscape {

@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/FrontStyles.scss";
 
-// import poster from "../images/backimg.jpeg";
+import poster from "../images/backimg.jpeg";
 
 export default function Front() {
   return (
