@@ -25,7 +25,7 @@
     @include flex-row-wrap;
     color: white;
     position: fixed;
-    margin: 3.5em auto;
+    margin: auto;
     left: 0;
     right: 0;
     top: 0;
@@ -39,7 +39,7 @@
       @include flex-col-nowrap;
       position: relative;
       width: 98%;
-      margin: auto;
+      margin: 0;
       padding: 5%;
       background: rgba(0, 0, 0, 0.4);
     }
