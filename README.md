@@ -13,4 +13,3 @@ My CV website [deployed here](https://o-savka.firebaseapp.com/).
 - Firebase
 
 
-![picture](https://github.com/OlSavMe/Current-CV-Website/blob/master/responsive.png)
