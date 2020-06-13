@@ -55,14 +55,14 @@
   }
 }
 
-@mixin phone-landscape {
-  @media only screen and (min-width: 769px) and (max-height: 700px) {
-    @content;
-  }
-}
+// @mixin phone-landscape {
+//   @media only screen and (min-width: 769px) and (max-height: 700px) {
+//     @content;
+//   }
+// }
 
 @mixin no-mobile {
-  @media only screen and (min-width: 769px) and (min-height: 700px) {
+  @media only screen and (min-width: 769px) {
     @content;
   }
 }

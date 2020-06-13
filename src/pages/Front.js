@@ -1,25 +1,14 @@
 import React from "react";
 import "../styles/FrontStyles.scss";
 
-import poster from "../images/backimg.jpeg";
-
 export default function Front() {
   return (
     <div className="front">
-      {/* <video autoPlay muted loop poster={poster}>
-        <source src={bannervideo} type="video/mp4" />
-      </video> */}
-      <img
-        className="mobimage"
-        src={require("../images/smob.jpeg")}
-        alt="sea"
-      />
-      <img className="descimage" src={require("../images/s.jpeg")} alt="sea" />
+      <img className="descimage" src={require("../images/se.png")} alt="sea" />
 
       <div className="container">
         <div className="profile">
           <div className="visual"></div>
-
           <div className="desc">
             <h2>Olga Savka</h2>
             <h2>Web Developer</h2>

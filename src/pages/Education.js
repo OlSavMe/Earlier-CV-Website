@@ -29,6 +29,7 @@ export default function Education() {
 
   return (
     <div className="edu">
+      <img className="descimage" src={require("../images/se.png")} alt="sea" />
       <div className="container">
         <section className="uni">
           <h2>

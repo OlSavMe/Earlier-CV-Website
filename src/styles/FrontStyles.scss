@@ -15,72 +15,34 @@
     position: fixed;
     top: 0;
     left: 0;
+    opacity: 0.8;
+
     z-index: -100;
-  }
-
-  .mobimage {
-    object-fit: cover;
-    width: 100vw;
-    @include max-height-vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -100;
-
-    @include no-mobile {
-      display: none;
-    }
-  }
-
-  video {
-    display: none;
-    // object-fit: cover;
-    // width: 100vw;
-    // @include max-height-vh;
-    // position: fixed;
-    // top: 0;
-    // left: 0;
-    // z-index: -100;
-    // background-color: wheat;
   }
 
   .container {
-    width: 80%;
+    width: 100%;
     flex: 1;
     @include flex-row-wrap;
     color: white;
     position: fixed;
-    margin: 10vh auto;
+    margin: 0;
     left: 0;
     right: 0;
+    top: 0;
     overflow: scroll;
     scroll-behavior: smooth;
-    padding: 5%;
+    padding: 10%;
     height: 100%;
-    background: rgba(17, 9, 9, 0.7);
+    background: rgba(17, 9, 9, 0.3);
 
     @include phone {
       @include flex-col-nowrap;
       position: relative;
       @include max-width;
       margin: auto;
-      background: rgba(0, 0, 0, 0.6);
-    }
-
-    @include phone-landscape {
-      margin-top: 3em;
-    }
-
-    @include big-desktop {
-      width: 60%;
-    }
-
-    @include tablet {
-      width: 90%;
-    }
-
-    @include tablet-landscape {
-      width: 90%;
+      padding: 5%;
+      background: rgba(0, 0, 0, 0.3);
     }
 
     .profile {
@@ -118,6 +80,7 @@
         }
 
         h2 {
+          text-shadow: rgb(87, 104, 87) 2px 2px;
           list-style-type: none;
           margin: 0;
           font-weight: normal;
@@ -137,6 +100,7 @@
         }
 
         h3 {
+          text-shadow: rgb(87, 104, 87) 2px 2px;
           list-style-type: none;
           margin: 0;
           font-weight: normal;
@@ -212,6 +176,7 @@
       text-align: justify;
       line-height: 1.7;
       font-size: 1.6rem;
+      // text-shadow: #343a40 2px 2px;
 
       @include phone {
         padding: 0;
@@ -221,7 +186,10 @@
       }
 
       p {
+        text-shadow: rgb(87, 104, 87) 2px 2px;
+        backdrop-filter: blur(8px);
         margin-top: 1rem;
+        padding: 2%;
         &:first-child {
           margin: 0;
         }

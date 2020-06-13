@@ -62,7 +62,7 @@ export default function Portfolio() {
       <div className="container">
         <div className="headbar">
           <h1>
-            My GitHub Repos
+            GitHub Repos
             <a
               href="https://github.com/OlSavMe"
               target="_blank"

@@ -15,7 +15,7 @@
     position: fixed;
     overflow: scroll;
     scroll-behavior: smooth;
-    margin: 9vh auto;
+    margin: 3.5em auto;
     padding: 3% 5%;
 
     @include phone {
@@ -36,7 +36,7 @@
         color: $dark;
         padding: 1rem;
         @include phone {
-          font-size: 1.3rem;
+          font-size: 1rem;
         }
 
         a {

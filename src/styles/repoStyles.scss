@@ -25,9 +25,9 @@
         width: calc(100% - 20px);
       }
 
-      @include phone-landscape {
-        font-size: 1.4rem;
-      }
+      // @include phone-landscape {
+      //   font-size: 1.4rem;
+      // }
       @include tablet {
         font-size: 1.4rem;
       }
@@ -47,9 +47,9 @@
         @include phone {
           text-decoration: underline;
         }
-        @include phone-landscape {
-          text-decoration: underline;
-        }
+        // @include phone-landscape {
+        //   text-decoration: underline;
+        // }
       }
 
       p {
@@ -67,9 +67,9 @@
           @include phone {
             font-size: 1.2rem;
           }
-          @include phone-landscape {
-            font-size: 1.2rem;
-          }
+          // @include phone-landscape {
+          //   font-size: 1.2rem;
+          // }
           &:hover {
             color: white;
           }

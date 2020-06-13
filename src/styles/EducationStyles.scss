@@ -3,18 +3,28 @@
 @include scrollbars;
 
 .edu {
-  @include max-height-vh;
+  height: 100%;
+  margin: 0;
   justify-items: center;
-  scroll-behavior: smooth;
-  background-color: $violet;
-  position: fixed;
-  @include zero-margin;
+  overflow: hidden;
 
   @include phone {
     position: static;
   }
 
+  .descimage {
+    object-fit: cover;
+    width: 100vw;
+    @include max-height-vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -100;
+    opacity: 0.6;
+  }
+
   .container {
+    backdrop-filter: blur(1px);
     @include max-width;
     @include max-height-vh;
     @include flex-col-nowrap;
@@ -22,11 +32,11 @@
     align-items: center;
     position: fixed;
     overflow: scroll;
-    margin: 11vh auto;
+    margin: 3.5em auto;
     left: 0;
     right: 0;
-    padding: 2% 10%;
-    background-color: $violet;
+    padding: 0 10%;
+    background-color: transparent;
 
     @include phone {
       position: relative;
@@ -50,10 +60,11 @@
       justify-content: space-evenly;
       align-items: center;
       margin-bottom: 2rem;
-      padding: 1%;
+      margin-top: 7em;
 
       @include phone {
         @include flex-col-nowrap;
+        margin-top: 3em;
       }
 
       @include tablet {
@@ -65,14 +76,21 @@
       }
 
       h2 {
+        display: block;
+        box-shadow: 0px 0px 40px 40px #a9caec;
         width: calc(60% - 10px);
-        background: white;
-        padding: 2rem;
+
+        background: transparent;
+
+        padding: 1rem;
         overflow: hidden;
-        border-radius: 10px;
+        border-radius: 20px;
+
         @include phone {
           height: calc(60% - 20px);
           @include max-width;
+          background: white;
+          box-shadow: none;
         }
         @include tablet {
           height: calc(60% - 20px);
