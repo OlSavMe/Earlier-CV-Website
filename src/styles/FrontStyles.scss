@@ -38,8 +38,7 @@
 
     @include phone {
       @include flex-col-nowrap;
-      position: relative;
-      @include max-width;
+      width: 95%;
       margin: auto;
       padding: 5%;
       background: rgba(0, 0, 0, 0.3);
@@ -176,7 +175,6 @@
       text-align: justify;
       line-height: 1.7;
       font-size: 1.6rem;
-      // text-shadow: #343a40 2px 2px;
 
       @include phone {
         padding: 0;
@@ -187,7 +185,7 @@
 
       p {
         text-shadow: rgb(87, 104, 87) 2px 2px;
-        backdrop-filter: blur(8px);
+        backdrop-filter: blur(9px);
         margin-top: 1rem;
         padding: 2%;
         &:first-child {

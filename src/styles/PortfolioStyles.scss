@@ -19,7 +19,6 @@
     padding: 3% 5%;
 
     @include phone {
-      position: relative;
       margin: auto;
       padding: 3% 0;
     }
@@ -35,6 +34,7 @@
       h1 {
         color: $dark;
         padding: 1rem;
+        font-size: 1.7rem;
         @include phone {
           font-size: 1rem;
         }
