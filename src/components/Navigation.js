@@ -7,7 +7,7 @@ import ThumbUpIcon from "@material-ui/icons/ThumbUp";
 import SchoolIcon from "@material-ui/icons/School";
 import AppBar from "@material-ui/core/AppBar";
 import { Link } from "react-router-dom";
-import ".././styles/BottomNavigationStyles.scss";
+import ".././styles/NavigationStyles.scss";
 
 export default function BottomNav() {
   const appBarStyle = {
