@@ -6,16 +6,16 @@ export const careerData = [
         company: "The Shortcut, Helsinki",
         period: "Jan 2020 - ongoing",
         desc:
-          "Developing responsive user interface of the company's website with ReactJS, SCSS, fetching data from WordPress and Eventbrite REST APIs with Axios client. Monitoring GitHub based collaboration. Teamwork with designers and markerters using Agile approach and Trello boards. Deployment of MVPs on Firebase platform.",
+          "Developing responsive user interface of the company's website with JavaScript and React.js, SCSS, fetching data from WordPress and Eventbrite APIs. Monitoring GitHub based collaboration. Teamwork with designers and marketers using Agile approach and Trello boards. Deployment of MVPs on Firebase platform.",
         link: "https://github.com/OlSavMe/React-Shortcut-Website",
         desctwo:
-          "Creating JSON data and visual charts for the interface of the Database Management System with ReactJS, react-chartjs-2, using Docker Containers for local dev environment. Teamwork with the backend developer and data analysts.",
+          "Creating JSON data and visual charts for the interface of the Database Management System with React.js, react-chartjs-2, using Docker Containers for local dev environment. Teamwork with a backend developer and data analysts.",
       },
       {
         company: "Haaga-Helia & Webscale Oy, Helsinki",
         period: "Aug 2019 - Dec 2019",
         desc:
-          "Developing user interface of a game web app with ReactJS, React Material-UI, qr scanner library, react-router, Axios client, using Docker Containers with pgAdmin for local dev environment. Team work with front- and backend developers, designers in Scrum sprints, using git version control and CircleCI for continuos delivery and automated testing.",
+          "Developing user interface of a game web app with React.js, React Material-UI, qr scanner library, react-router, Axios, using Docker Containers with pgAdmin for local dev environment. Team work with front- and backend developers, designers in Scrum sprints, using git version control and CircleCI for continuous delivery and automated testing.",
         link: "",
         desctwo: "",
       },

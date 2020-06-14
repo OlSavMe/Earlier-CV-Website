@@ -17,13 +17,13 @@ export default function Career() {
             <p>
               {" "}
               During 2019 - 2020, I've worked in several team projects as a
-              React/JavaScript developer.
+              React.js/JavaScript developer.
             </p>
             <p>
               {" "}
-              Tools I've used at work include: ReactJS and other JavaScript
-              libraries, SASS/SCSS, SQL, Axios, git version control, WordPress
-              as a headless CMS, Figma for wireframes.
+              Tools I've used at work include: JavaScript libraries, SASS/SCSS,
+              SQL, Axios, git version control, WordPress as a headless CMS,
+              Figma for wireframes.
             </p>
           </span>
           <span>
