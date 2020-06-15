@@ -21,7 +21,7 @@
     position: fixed;
     overflow: scroll;
     margin: 4em auto 0;
-    padding: 6% 0;
+    padding-top: 6%;
 
     h1,
     h2,
@@ -33,7 +33,7 @@
     @include phone {
       position: relative;
       margin: auto;
-      padding: 8% 0 0;
+      padding-top: 6%;
     }
 
     section {
@@ -41,7 +41,7 @@
       @include flex-col-nowrap;
       justify-content: center;
       align-items: center;
-      padding: 2% 15%;
+      padding: 2% 7%;
       font-size: 1.5rem;
       text-align: center;
 
@@ -83,7 +83,7 @@
 
     section:first-of-type {
       span {
-        padding: 3%;
+        padding: 2%;
       }
     }
 
@@ -92,7 +92,7 @@
     }
 
     .white {
-      padding: 3% 0 0;
+      padding: 0;
       background: white !important;
       .white > svg {
         display: block;

@@ -35,7 +35,7 @@ export default function Education() {
           <h2>
             Business Information Technologies, <br /> Haaga Helia UAS, Helsinki{" "}
             <br />
-            2017-2020 (257 cr GPA 4.08/5)
+            2017-2020 (263 cr GPA 4.08/5)
           </h2>
           <h2>
             Linguistics and Intercultural Communication, <br /> Tver State

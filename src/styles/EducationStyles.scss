@@ -60,7 +60,7 @@
       justify-content: space-evenly;
       align-items: center;
       margin-bottom: 2rem;
-      margin-top: 7em;
+      margin-top: 5em;
 
       @include phone {
         @include flex-col-nowrap;

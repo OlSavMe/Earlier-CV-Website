@@ -56,33 +56,34 @@ export default function Front() {
           </div>
         </div>
         <section className="hash">
-          <p>
-            Hi! My name is Olga Savka and{" "}
-            <a
-              href="https://github.com/OlSavMe/Current-CV-Website"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              this website
-            </a>{" "}
-            is my pet project.
-          </p>
-          <p>
-            {" "}
-            I am a web developer with hands-on experience in JavaScript and
-            ReactJS development team projects. This includes: creating
-            responsive interfaces, configuring API requests, working with
-            headless CMS. Through my university studies I have also gained
-            knowledge of Node.js, Java, C/C++ and Azure DevOps. In 2020, I will
-            be graduating as a software developer from Haaga-Helia UAS,
-            Helsinki.
-          </p>
-          <p>
-            {" "}
-            Before my IT career I worked as an English technical translator. For
-            further information surrounding my portfolio, career and education
-            please click the relevant section above...
-          </p>
+          <div>
+            <p>
+              Hi! My name is Olga Savka and{" "}
+              <a
+                href="https://github.com/OlSavMe/Current-CV-Website"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                this website
+              </a>{" "}
+              is my pet project.
+            </p>
+            <p>
+              I am a web developer with hands-on experience in JavaScript and
+              ReactJS development team projects. This includes: creating
+              responsive interfaces, configuring API requests, working with
+              headless CMS. Through my university studies I have also gained
+              knowledge of Node.js, Java, C/C++ and Azure DevOps. In 2020, I
+              will be graduating as a software developer from Haaga-Helia UAS,
+              Helsinki.
+            </p>
+            <p>
+              {" "}
+              Before my IT career I worked as an English technical translator.
+              For further information surrounding my portfolio, career and
+              education please click the relevant section above...
+            </p>
+          </div>
         </section>
         <section className="empty"></section>
       </div>
