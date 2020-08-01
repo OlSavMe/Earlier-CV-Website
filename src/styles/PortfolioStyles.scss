@@ -3,16 +3,15 @@
 @include scrollbars;
 
 .portfolio {
-  @include max-height-vh;
   justify-items: center;
   scroll-behavior: smooth;
 
   .container {
     @include max-width;
-    @include max-height-vh;
+
     @include flex-col-nowrap;
     justify-content: flex-start;
-    position: fixed;
+
     overflow: scroll;
     scroll-behavior: smooth;
     margin: 3.5em auto;
@@ -34,7 +33,6 @@
 
       h1 {
         color: $dark;
-        // padding: 1rem;
         font-size: 1.7rem;
         @include phone {
           font-size: 1.3rem;

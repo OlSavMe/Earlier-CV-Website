@@ -3,10 +3,9 @@
 @include scrollbars;
 
 .career {
-  @include max-height-vh;
   justify-items: center;
   scroll-behavior: smooth;
-  position: fixed;
+
   @include zero-margin;
 
   @include phone {
@@ -15,10 +14,10 @@
 
   .container {
     @include max-width;
-    @include max-height-vh;
+
     @include flex-col-nowrap;
     align-items: center;
-    position: fixed;
+
     overflow: scroll;
     margin: 4em auto 0;
     padding-top: 6%;

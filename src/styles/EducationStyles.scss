@@ -3,7 +3,6 @@
 @include scrollbars;
 
 .edu {
-  height: 100%;
   margin: 0;
   justify-items: center;
   overflow: hidden;
@@ -26,11 +25,9 @@
   .container {
     backdrop-filter: blur(1px);
     @include max-width;
-    height: 100%;
     @include flex-col-nowrap;
     text-align: center;
     align-items: center;
-    position: fixed;
     overflow: scroll;
     margin: 3.5em auto;
     left: 0;
